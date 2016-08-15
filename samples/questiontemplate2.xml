@@ -12,40 +12,40 @@
 			Utilizando o método de integral tal <a href="https://www.google.com.br/search?q=parsexml+error+in+url&ie=utf-8&oe=utf-8&client=firefox-b-ab&gfe_rd=cr&ei=yb-kV-3RDfOp8wfVnS8#q=parse+xml+error+in+url+jquery" target="_blank">informações adicionais</a>
 		</explanation>
 	</choice>
-	<choice correct="false">
+	<choice type="incorrect">
 		<text>opção 2</text>
 		<explanation>
 			Utilizando ...
 		</explanation>
 	</choice>
-	<choice correct="false">
+	<choice type="incorrect">
 		<text>opção 3</text>
 		<explanation>
 			Utilizando ...
 		</explanation>
 	</choice>
-	<choice correct="false">
+	<choice type="incorrect">
 		<text>opção 4</text>
 		<explanation>
 			Utilizando ...
 		</explanation>
 	</choice>
-	<choice correct="false">
+	<choice type="incorrect">
 		<text>opção 5</text>
 		<explanation>
 			Utilizando ...
 		</explanation>
 	</choice>
-	<choice correct="true">
+	<choice type="incorrect">
 		<text>opção 6</text>
 	</choice>
-	<choice correct="false">
+	<choice type="correct">
 		<text>opção 7</text>
 		<explanation>
 			<img src="http://www.clickgratis.com.br/fotos-imagens/imagem/aHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMi5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjU1ZFbkFCS0szMktsZmhDN2NjSmxYTXVISWN2QzZWdEZXdW9wMy1QMEhJNjVxSUlBaFRvZw==.jpg" />
 		</explanation>
 	</choice>
-	<choice correct="true">
+	<choice type="incorrect">
 		<text>opção 8</text>
 		<explanation>
 			qualquer
