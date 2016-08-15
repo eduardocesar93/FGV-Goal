@@ -64,6 +64,7 @@ a fim de que as recomendações abaixo sejam atendidas.
 xmllint --valid template-1.xml
 #+END_SRC
 
-vão ter um erro de validação. E o que falta é dizer que todas as tags
-de XHTML válida dentro de uma tag p devem ser válidas para <text> e
-<explanation>.
+O template-2.xml terá ainda erros de validação. E o que falta é dizer
+que todas as tags de XHTML válida dentro de uma tag p devem ser
+válidas para <text> e <explanation>. Também falta declarar
+corretamente os atributos que recebem URIs.
