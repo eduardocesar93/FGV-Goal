@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<question level="1" subject="calculus">
+	<wording>
+		Calcule a seguinte integral <latex>\int \cos \theta \,d\theta</latex>
+	</wording>
+	<option correct="true">
+		opção 1
+		<explanation>
+			Utilizando o método de integral tal <link ref="https://www.google.com.br/">informações adicionais</link>
+		</explanation>
+	</option>
+	<option correct="false">
+		opção 2
+		<explanation>
+			Utilizando ...
+		</explanation>
+	</option>
+	<option correct="false">
+		opção 3
+		<explanation>
+			Utilizando ...
+		</explanation>
+	</option>
+	<option correct="false">
+		opção 4
+		<explanation>
+			Utilizando ...
+		</explanation>
+	</option>
+	<option correct="false">
+		opção 5
+		<explanation>
+			Utilizando ...
+		</explanation>
+	</option>
+	<option correct="true">
+		opção 6
+	</option>
+	<option correct="false">
+		opção 7
+		<explanation>
+			<fig ref="http://www.clickgratis.com.br/fotos-imagens/imagem/aHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMi5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjU1ZFbkFCS0szMktsZmhDN2NjSmxYTXVISWN2QzZWdEZXdW9wMy1QMEhJNjVxSUlBaFRvZw==.jpg" />
+		</explanation>
+	</option>
+	<option correct="true">
+		opção 8
+		<explanation>
+			qualquer
+		</explanation>
+	</option>
+</question>

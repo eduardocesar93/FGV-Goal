@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE question SYSTEM "question.dtd">
+
+<question id="1" level="0" subject="graphs">
+
+  <text> texto com a questão.</text>
+  <explanation>a explicação.</explanation>
+  <choice type="correct">
+    <text>primeira possivel resposta</text>
+    <explanation>explicacao da resposta</explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>segunda possivel resposta</text>
+    <explanation>segunda explicacao da resposta</explanation>
+  </choice>
+</question>
