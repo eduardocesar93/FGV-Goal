@@ -2,8 +2,7 @@
 <!DOCTYPE question SYSTEM "question.dtd">
 
 <question id="1" level="0" subject="graphs">
-
-  <text> texto com a questão.</text>
+  <text>o texto da questão.</text>
   <explanation>a explicação.</explanation>
   <choice type="correct">
     <text>primeira possivel resposta</text>

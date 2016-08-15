@@ -1,4 +1,6 @@
 
+<!ENTITY % URI "CDATA" > 
+
 <!ELEMENT question (text,explanation,choice+) >
 <!ATTLIST question
 	  level   CDATA #REQUIRED
@@ -9,9 +11,21 @@
   p, listas, tabela, quote) menos campos de formularios e formularios?
   talvez redeclarar apenas o que queremos? img, ul, li, ol, a etc -->
 
-<!ELEMENT text (#PCDATA) >
-<!ELEMENT explanation (#PCDATA) >
+<!ELEMENT text (#PCDATA|img|a|b|i)* >
+<!ELEMENT explanation (#PCDATA|img|a|b|i)* >
 
 <!ELEMENT choice (text,explanation) >
 <!ATTLIST choice
 	  type (correct|incorrect) "correct" >
+
+<!ELEMENT a (#PCDATA) >
+<!ATTLIST a
+	  src %URI; #REQUIRED >
+
+<!ELEMENT img (#PCDATA) >
+<!ATTLIST img
+	  href %URI; #REQUIRED 
+	  target CDATA #REQUIRED >
+
+<!ELEMENT b (#PCDATA) >
+<!ELEMENT i (#PCDATA) >
