@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE question SYSTEM "question.dtd">
+
+<question id="1" level="1" subject="calculus">
+  <text>
+    Calcule a seguinte integral $\int \cos \theta \,d\theta$
+  </text>
+  <explanation>
+    <i>Explicação da questão</i>
+  </explanation>
+  <choice type="correct">
+    <text><b>opção 1</b></text>
+    <explanation>
+      Utilizando o método de integral tal <a href="https://www.google.com.br/search?q=parsexml+error+in+url&ie=utf-8&oe=utf-8&client=firefox-b-ab&gfe_rd=cr&ei=yb-kV-3RDfOp8wfVnS8#q=parse+xml+error+in+url+jquery" target="_blank">informações adicionais</a>
+    </explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>opção 2</text>
+    <explanation>
+      Utilizando ...
+    </explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>opção 3</text>
+    <explanation>
+      Utilizando ...
+    </explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>opção 4</text>
+    <explanation>
+      Utilizando ...
+    </explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>opção 5</text>
+		<explanation>
+			Utilizando ...
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>opção 6</text>
+	</choice>
+	<choice type="correct">
+		<text>opção 7</text>
+		<explanation>
+			<img src="http://www.clickgratis.com.br/fotos-imagens/imagem/aHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMi5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjU1ZFbkFCS0szMktsZmhDN2NjSmxYTXVISWN2QzZWdEZXdW9wMy1QMEhJNjVxSUlBaFRvZw==.jpg" />
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+	  <text>opção 8</text>
+	  <explanation>
+	    qualquer
+	  </explanation>
+	</choice>
+</question>
