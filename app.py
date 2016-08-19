@@ -6,6 +6,8 @@ from werkzeug.utils import secure_filename
 UPLOAD_FOLDER = 'static/images/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif', 'xml', 'xmls', 'txt'])
 
+port = int(os.getenv('VCAP_APP_PORT', 8080))
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -60,7 +62,7 @@ def upload():
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			state = "success"
 			message = "A questão foi salva com sucesso"
-		if 'question' in request.files:
+	if 'question' in request.files:
 			file = request.files['question']
 			if file and allowed_file(file.filename):
 				filename = secure_filename(file.filename)
@@ -76,5 +78,5 @@ def upload():
 if __name__ == "__main__":
 	app.secret_key = 'FGV-EMAP 13410 Selva'
 	app.config['SESSION_TYPE'] = 'filesystem'
-	app.run()
+	app.run(host='0.0.0.0', port=port)
 	
