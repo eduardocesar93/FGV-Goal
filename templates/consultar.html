@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>GOAL FGV</title>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,600,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link rel="stylesheet" href="static/stylesheets/style.css">
+		<link rel="stylesheet" href="static/stylesheets/normalize.css">
+	</head>
+	<body>
+		<header>
+			<nav id="nav" class="ry">
+				<ul id="main-menu">
+					<li>
+					  <a href="/"><i class="fa fa-home"></i> Página Inicial</a>
+					</li>
+					<li>
+					  <a href="#"><i class="fa fa-user"></i> Sobre <i class="fa fa-caret-down"></i></a>
+						<ul class="submenu">
+						<li><a href="#0">GitHub</a></li>
+						<li><a href="#0">Gradiance</a></li>
+						<li>
+						  <a href="#0">Mais Itens <i class="fa fa-caret-right"></i></a>
+						   <ul class="submenu">
+							<li><a href="#0">Um sub-Item</a></li>
+							<li>
+							  <a href="#0">Outro sub-Item</a>
+							 </li>
+							<li>
+							  <a href="#0">Outro sub-Item</a>
+							 </li>
+						  </ul>  
+						 </li>
+					  </ul>  
+					</li>
+					<li>
+					  <a href="#" class="active"><i class="fa fa-pencil" aria-hidden="true"></i> Questões <i class="fa fa-caret-down"></i></a>
+					   <ul class="submenu">
+						<li><a href="submeter">Submeter</a></li>
+						<li><a href="#0" class="active">Consultar</a></li>
+					  </ul>  
+					</li>
+					<li>
+					  <a href="#"><i class="fa fa-comment"></i> Contato</a>
+					</li>
+				</ul>
+			</nav>  
+		</header>
+		<main id="main">
+			<div class="container">
+			  <div class="row">
+				<div class="col-sm-12">
+					<div id="question">
+						<h2>Questões</h2>
+						<p>Selecione uma questão para visualização</p>
+						<div id="info">
+						</div>
+						<div id="wording">
+						</div>
+						<div id="explanation">
+						</div>
+						<br/>
+						<div id="options">
+						</div>
+						<br/>
+						<button type="button" class="btn btn-primary btn-lg btn-green" data-toggle="modal" data-target="#myModal">
+							Selecione
+						</button>
+					</div>
+					<div id="myModal" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Questões</h4>
+								</div>
+								<div class="modal-body">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+			  </div>
+			</div>
+		</main>
+	</body>
+	<footer>
+	  <p>Site template built for many templates  <a href="http://getbootstrap.com">google</a> by todos.</p>
+	  <p>
+		<a href="#">Ir para o topo</a>
+	  </p>
+	</footer>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="static/scripts/menu.js"></script>
+	<script type="text/javascript" src="static/scripts/goal.js"></script>
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+</html>

@@ -1,0 +1,352 @@
+@import "bourbon";
+
+$drk: #34495E;
+$grn: #16A085;
+$wht: #f5f5f5;
+
+*{@include box-sizing(border-box);}
+
+%fix {
+  &:after {clear:both;content:"";display:table;}
+  &:before { content:"";display:table;} }
+
+ul {list-style: none;padding:0; margin: 0;@extend %fix;}
+
+body {
+  font-family: "Raleway";
+  font-weight: 400;
+  color: $drk;
+  background: darken($wht,2%);
+}
+
+header {
+  @extend %fix;
+  background: darken($drk,4%);
+  padding: 0 7%;
+  @include transform-style(preserve-3d);
+  box-shadow: 0 2px 5px rgba(#444,.3);
+  @include perspective(1555px);
+}
+
+#main {
+  @extend %fix;
+  padding: 2.5em 7%;
+  
+  .efx-info {
+    width: 49%;
+    float: left;
+    padding: 2em 1em;
+    font-weight: 700;
+    border-radius: .2em;
+    
+    h1 {
+      line-height: 1;
+      display: inline-block;
+      padding: .1em .2em;
+     font-size: 5em;
+     margin: 0;
+     background: darken($wht,7%);
+    }
+    
+    p {
+      margin: 0;
+    }
+  }
+  
+  #efx-name {
+    color: $grn;
+    font-weight: 900;
+    border-bottom: 4px solid $wht
+  }
+  
+  #efx-ease {
+   color: $drk;
+  }
+  
+  .menu-chks {
+    position: relative;
+    line-height: 1;
+    font-size: .9em;
+    width: 45%;
+    float: right;
+    
+    input {
+      margin-right: .5em;
+      
+      &:checked + span {
+        color: $grn;
+        
+        &:before {
+          content: "\f046";
+          
+        }
+      }
+    }
+    
+    span {@include transition(all .2s ease);}
+    
+    span:before {
+      font-family: 'FontAwesome';
+      position: absolute;
+      left: 12px;
+      top: 10px;
+      color: lighten($drk,4%);
+      content:"\f096";
+      font-size: 1.4em;
+    }
+    
+    label {
+      color: darken($wht,5%);
+      font-weight: 600;
+      display: inline-block;
+      position: relative;
+      margin: .25em;
+      background: darken($drk, 4%);
+      padding: .8em 1.2em .8em 2.5em;
+      border-radius: .4em;
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+nav {
+  
+  li {
+    position: relative;
+    display: inline-block;
+    float: left;
+  }
+  
+  a {
+    position: relative;
+    z-index: 599;
+    color: $wht;
+    background: darken($drk,4%);
+    text-decoration: none;
+    display: block;
+    padding: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include transition(all .2s ease);
+    
+    i[class*="caret"] {
+      color: lighten($drk,4%);
+      margin-left: .15em;
+    }
+    
+    &:hover {
+      color: $grn;
+    }
+    
+    &:hover + .submenu {
+      opacity: 1;
+      @include transform(rotateX(0deg));
+      visibility: visible;
+    }
+  }
+  
+  .eiob .submenu {
+    @include transition(all .3s $ease-in-out-back, opacity .2s linear);
+  }
+  
+  .ln .submenu {
+    @include transition(all .3s linear);
+  }
+  
+  .ei .submenu {
+     @include transition(all .3s ease-in, opacity .2s linear);
+  }
+  
+  .eo .submenu {
+     @include transition(all .3s ease-out, opacity .2s linear);
+  }
+  
+  .submenu {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 499;
+    width: 14em;
+    top: 100%;
+    left: 0;
+    background: darken($drk,4%);
+    box-shadow: 0 2px 5px rgba(#444,.3);
+    @include transform-origin(top center);
+    @include transform(rotateX(-90deg));
+    @include transition(all .25s ease);
+    
+    li > .submenu {
+      top: 0;
+      left: 100%;
+    }
+    
+    &:hover {
+     opacity: 1;
+     @include transform(rotateX(0deg));
+     visibility: visible;
+    }
+    
+    li {
+      float: none;
+      display: block;
+    }
+    a {
+      width: 100%;
+      display: block;
+      font-weight: 300;
+     // border-bottom: 2px solid darken($grn,4%);
+      padding: 1.4em 2em;
+      &:hover {
+        color: $wht;
+        background: darken($grn,2.5%);
+      }
+    }
+    
+  }
+  
+}
+
+nav.rx {
+  
+  li {
+     &:hover + .submenu {
+     opacity: 1;
+      @include transform(rotateY(0deg));
+    }
+  }
+  
+  .submenu {
+    @include transform(rotateY(-90deg));
+    
+    &:hover {
+     @include transform(rotateY(0deg));
+    }
+  }
+  
+}
+
+/*=== Fade Dwn ===*/
+nav.fd {
+  li {
+     &:hover + .submenu {
+     opacity: 1;
+      @include transform(translateY(0px));
+     
+    }
+  }
+  
+  .submenu {
+    @include transform-origin(center center);
+     @include transform(translateY(-50px));
+    
+    &:hover {
+
+       @include transform(translateY(0px));
+    }
+  }
+  
+}
+
+
+nav.fu {
+  
+  li {
+     &:hover + .submenu {
+     opacity: 1;
+      @include transform(translateY(0px));
+     
+    }
+  }
+  
+  .submenu {
+    @include transform-origin(center center);
+     @include transform(translateY(20px));
+    
+    &:hover {
+
+       @include transform(translateY(0px));
+    }
+  }
+  
+}
+
+/*=== Scale ===*/
+nav.sc {
+  li {
+     &:hover + .submenu {
+     opacity: 1;
+      @include transform(rotateY(0deg) scale(1));
+     
+    }
+  }
+  
+  .submenu {
+    @include transform-origin(center top);
+     @include transform(scale(0));
+    
+    &:hover {
+       @include transform(rotateY(0deg) scale(1));
+    }
+  }
+}
+
+/*==== Rotate ====*/
+nav.rt {
+  li {
+     &:hover + .submenu {
+      @include transform(rotate(0deg));
+    }
+  }
+  .submenu {
+    @include transform-origin(center center);
+     @include transform(rotate(180deg));
+    
+    &:hover {
+       @include transform(rotate(0deg));
+       @include transform(scale(1));
+    }
+  }
+  
+}
+
+
+/*==== Move/Skew In ====*/
+nav.mv {
+  li {
+     &:hover + .submenu {
+      @include transform(translateX(0px) skewX(0deg));
+    }
+  }
+  .submenu {
+    @include transform-origin(center center);
+     @include transform(translateX(-40px) skewX(-7deg));
+    
+    &:hover {
+       @include transform(skewX(0deg));
+    }
+  }
+  
+}
+
+/*==== Door ====*/
+nav.dc {
+  li {
+     &:hover + .submenu {
+      @include transform(rotateY(0deg));
+    }
+  }
+  .submenu {
+    @include transform-origin(left top);
+     @include transform(rotateY(-90deg));
+    
+    &:hover {
+       @include transform(rotateY(0deg));
+    }
+  }
+  
+}

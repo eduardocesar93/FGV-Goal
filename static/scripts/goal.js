@@ -1,14 +1,14 @@
 function readSingleFile(e) {
-  var file = e.target.files[0];
-  if (!file) {
-    return;
-  }
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    var contents = e.target.result;
-    renderQuestion(contents);
-  };
-  reader.readAsText(file);
+	var file = e.target.files[0];
+	if (!file) {
+	return;
+	}
+	var reader = new FileReader();
+	reader.onload = function(e) {
+		var contents = e.target.result;
+		renderQuestion(contents);
+	};
+	reader.readAsText(file);
 }
 
 function renderQuestion(file)
@@ -42,6 +42,13 @@ function renderQuestion(file)
             + textChoice + "<span hidden='hidden'>" 
             + explanation + " <i> - " + message + "</i></span></div>");
     });
+	
+	$( "#question img" ).each(function() {
+		linkAtual = $(this).attr("src");
+		if(linkAtual.substring(0, 5) == "image"){
+			$( this ).attr("src", "static/" + linkAtual);
+		}
+	});
     
     $("input[name='option']").change(function(){
         $("#options div span").hide();
@@ -52,9 +59,28 @@ function renderQuestion(file)
 }
 
 $( document ).ready(function(){
-	document.getElementById('file-input').addEventListener('change', readSingleFile, false);
-	$("input[name='option']").change(function(){
-		$("#options div span").hide();
-		$("span").first().parent().find("span").show();
+	$.ajax({
+		url: "questao?file=template-2.xml",
+		success: function(data){
+			renderQuestion(data);
+		}
+	});
+	
+	$.ajax({
+		url: "listarQuestoes",
+		success: function(data){
+			$(".modal-body").append(data);
+			$(".files li a").click(function(event){
+				event.preventDefault();
+				question = $(this).text();
+				$.ajax({
+					url: "questao?file=" + question,
+					success: function(data){
+						renderQuestion(data);
+					}
+				});
+				$(".btn-secondary[data-dismiss='modal']").click()
+			});
+		}
 	});
 });
