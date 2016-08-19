@@ -59,6 +59,8 @@ function renderQuestion(file)
 }
 
 $( document ).ready(function(){
+    jQuery.noConflict();
+    
 	$.ajax({
 		url: "questao?file=template-2.xml",
 		success: function(data){
@@ -70,11 +72,11 @@ $( document ).ready(function(){
 		url: "listarQuestoes",
 		success: function(data){
 			$(".modal-body").append(data);
-			$(".files li a").click(function(event){
+			$(".files li a.consulta").click(function(event){
 				event.preventDefault();
-				question = $(this).text();
+				urlLink = $(this).attr('href');
 				$.ajax({
-					url: "questao?file=" + question,
+					url: urlLink,
 					success: function(data){
 						renderQuestion(data);
 					}
