@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 from flask import Flask, request, redirect, url_for, render_template, flash
 from werkzeug.utils import secure_filename
@@ -59,7 +60,7 @@ def upload():
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			state = "success"
 			message = "A questão foi salva com sucesso"
-	if 'question' in request.files:
+		if 'question' in request.files:
 			file = request.files['question']
 			if file and allowed_file(file.filename):
 				filename = secure_filename(file.filename)
