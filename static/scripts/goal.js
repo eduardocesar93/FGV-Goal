@@ -51,7 +51,7 @@ function renderQuestion(file)
 	});
     
     $("input[name='option']").change(function(){
-        $("#options div span.correct").hide();
+        $("#options div span.choice").hide();
         $(this).parent().find("span").show();
     });
     
