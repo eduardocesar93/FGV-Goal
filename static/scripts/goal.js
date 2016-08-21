@@ -39,7 +39,7 @@ function renderQuestion(file)
         }
         var message = $(this).attr("type") == "correct" ? "Correto!" : "Errado";
         $("#options").append("<div><input type='radio' name='option' value='" + index + "'>" 
-            + textChoice + "<span hidden='hidden'>" 
+            + textChoice + "<span hidden='hidden' class='choice'>" 
             + explanation + " <i> - " + message + "</i></span></div>");
     });
 	
@@ -51,7 +51,7 @@ function renderQuestion(file)
 	});
     
     $("input[name='option']").change(function(){
-        $("#options div span").hide();
+        $("#options div span.correct").hide();
         $(this).parent().find("span").show();
     });
     
