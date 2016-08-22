@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question id="1" level="2" subject="grafo">
+	<text>
+		<p>
+			O BFS é um agoritmo de busca em grafo. Utilizando esse algoritmo, uma ordem 
+			possível de vértices visitados é:
+		</p><br/>
+		<img src="images/graph02.gif"/><br/>
+	</text>
+	<explanation>
+		BFS: Breadth First Search - <a href="http://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/bfs.html">Link para mais informações</a> 
+	</explanation>
+	<choice type="incorrect">
+		<text>M - N - O - P - Q - R</text>
+		<explanation>
+			Essa sequência não corresponde a uma sequência possível no BFS. Tente simular esse grafo nesse <a href="http://visualgo.net/dfsbfs">Link</a>
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>N - Q - M - P - O - R</text>
+		<explanation>
+			Essa sequência não corresponde a uma sequência possível no BFS. Tente simular esse grafo nesse <a href="http://visualgo.net/dfsbfs">Link</a>
+		</explanation>
+	</choice>
+	<choice type="correct">
+		<text>Q - M - N - P - R - O</text>
+		<explanation>
+			Essa sequência satisfaz todas as condições de uma sequência de visitas segundo o BFS.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Q - M - N - P - O - R</text>
+		<explanation>
+			Essa sequência não corresponde a uma sequência possível no BFS. Tente simular esse grafo nesse <a href="http://visualgo.net/dfsbfs">Link</a>
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>R - M - N - O - P - Q
+		</text>
+		<explanation>
+			Essa sequência não corresponde a uma sequência possível no BFS. Tente simular esse grafo nesse <a href="http://visualgo.net/dfsbfs">Link</a>
+		</explanation>
+	</choice>
+</question>
