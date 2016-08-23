@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<question id="BGM-q5" level="3" subject="Grafo">
+
+    <text>
+       <p>Um professor de estrutura de dados sugere aos seus alunos um método para encontrar o caminho mais curto entre 2 vértices <i>x</i> e <i>y</i>, de um grafo G direcionado com arestas de peso negativo: adicione uma constante <i>c</i> , suficientemente grande, ao peso de todas as arestas do grafo, de forma que os novos pesos, após a adição, sejam obrigatoriamente positivos. Em seguida, utilize o algoritmo Dijkstra shortest path iniciando pelo vértice <i>x</i>. Indique a alternativa verdadeira?</p>
+	Considere V: número de vértices do grafo G e A: número de arestas do grafo G.
+    </text>
+
+    <explanation>
+        <i><p> O método não é válido. Para justificar, vamos indicar um contra exemplo. Considere um grafo em que existem 2 caminhos entre 2 vértices  <i>x</i> e <i>y</i>, onde um dos caminhos consiste em uma única aresta de peso 2. O outro caminho consiste em 3 arestas com pesos 1,1,-2. Examinando criteriosamente os 2 caminhos, é fácil analisar que o caminho com mais arestas é mais curto com peso total de 0, enquanto que o caminho com apenas uma única aresta possui peso de 2. Utilizando o método sugerido pelo professor, e somando 3 a todas as arestas, temos uma nova configuração em que o caminho com mais arestas tem um novo peso total de 9 (4+4+1), enquanto que o que o caminho com apenas uma única aresta tem um novo peso total de 5, invertendo os caminhos mais curtos. Esse método vai funcionar apenas se os possíveis caminhos entre 2 vértices tiverem o mesmo número de arestas.</p></i>
+    </explanation>
+
+	<choice type="correct">
+		<text> O método não é válido sempre, porém em algumas ocasiões específicas ele pode ser aplicado. Nessas ocasições, o tempo de processamento consegue melhorar o tempo de processamento do algoritmo de Bellman-Ford, referência no assunto</text>
+		<explanation>
+			
+		</explanation>
+	</choice>
+
+	<choice type="incorrect">
+		<text>O método é válido e consegue melhorar o tempo de processamento para \( O((|V|+|A|) \log |V|) \), que é exatamente a complexidade do  algoritmo de Dijkstra.</text>
+		<explanation>
+		O método não é válido. Conseguimos encontrar um contra exemplo para o método sugerido.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>O método é válido, porém não consegue melhorar o tempo de processamento do algoritmo de Bellman-Ford, referência no assunto, logo não traz grandes novidades sobre o tema.</text>
+		<explanation>
+		O método não é válido. Conseguimos encontrar um contra exemplo para o método sugerido.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>O método não é válido e não traz ganho algum em nenhuma situação.</text>
+		<explanation>
+		Esse método vai funcionar apenas se os possíveis caminhos entre 2 vértices tiverem o mesmo número de arestas. Nessas ocasições, o tempo de processamento consegue melhorar o tempo de processamento do algoritmo de Bellman-Ford, referência no assunto.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>O método não é válido sempre. O mais indicado é utilizar o algoritmo de força bruta conhecido como Bellman-Ford.</text>
+		<explanation>
+		Essa opção está incorreta pois faz referência ao algoritmo de Bellman-Ford como sendo força bruta o que não é verdade. A complexidade do algoritmo de Bellman-Ford é \( O(|V|.|A|) \)
+		</explanation>
+	</choice>
+
+
+</question>
