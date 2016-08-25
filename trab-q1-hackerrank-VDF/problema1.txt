@@ -1,0 +1,63 @@
+Esse problema é sobre grafos!
+
+Um grafo é conectado se, para cada par de nós u e v do grafo, existe um caminho entre u e v. Neste caso, um componente conectado nada mais é que o grafo formado pelo conjunto
+de vértices que são conectados todos entre si e suas arestas. Se um grafo é conectado, dizemos que ele tem um componente conectado. Se o grafo for desconectado, 
+ele terá mais de um componente conectado. Ou seja: um grafo é desconectado se tiver dois vértices (u, v) que não forem conectados. Assim, u e v pertencem a componentes 
+distintos.
+
+O problema é : listar todos os componentes conectados que existem no gráfico, de acordo com a entrada dada.
+
+A entrada do problema está organizada da seguinte forma:
+
+A primeira linha do arquivo de entrada contém um inteiro N que representa o número de casos de teste que teremos. 
+Cada caso de teste contém dois números x e y, representando respectivamente, o número de vértices e o de arestas do grafo. 
+Seguem as y linhas, com dois valores em cada linha, cada um representando um vértice, e o par representando a aresta que liga tais vértices. 
+Cada vértice é representado por uma letra minúscula do alfabeto.
+Isso significa 26 vértices no máximo. Se tivermos 3 vértices, os vértices serão representados por a, b, c. Se tivermos 4, por a,b,c,d, assim por diante.
+Para cada caso de teste, imprima a mensagem conforme os casos exemplos.
+
+Exemplo:
+ 
+Entrada:
+3
+3 1
+a c
+10 10
+a b
+a c
+a g
+b c
+c g
+e d
+d f
+h i
+i j
+j h
+6 4
+a b
+b c
+c a
+e f
+
+Saída:
+
+Caso #1:
+a,c,
+b,
+2 componentes conectados
+
+Caso #2:
+a,b,c,g,
+d,e,f,
+h,i,j,
+3 componentes conectados
+
+Caso #3:
+a,b,c,
+d,
+e,f,
+3 componentes conectados
+ 
+
+
+ 
