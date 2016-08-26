@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<question id="BGM-q4" level="1" subject="Master Theorem">
+
+	<text>
+       <p>Algoritmos que utilizam a estratégia de divisão e conquista, ou do inglês "Divide and Conquer", tem um padrão geral de resolver de forma recursiva um problema de tamanho <i>n</i> através da resolução de <i>a</i> subproblemas de tamanho <i>n/b</i> e combinar essas respostas em um tempo \( O(n^d) \), para a,b,d > 0. Esse padrão de solução recursiva utiliza um teorema fundamental conhecido como Master Theorem, que diz que para um <i>n</i> grande temos: \( T(n) \le aT(n/b) + O(n^d) \). Considerando o problema de busca binária, que consiste em encontrar uma chave K em um conjunto de chaves ordenadas z[0,1,...,n-1]. Nesse problema, nós comparamos K com z[n/2] e dependendo do resultado, iteramos recursivamente na primeira ou na segunda metade do conjunto de chaves ordenadas. Podemos indicar os seguintes valores para as variáveis, citadas anteriormente e o respectivo de tempo de processamento, baseado no tamanho <i>n</i> do conjunto:</p>
+  </text>
+
+    <explanation>
+        <i><p> Na busca binária, ao realizar a iteração recursiva, descartamos a metade do conjunto que não atende ao resultado esperado pela comparação de K com z[n/2]. Dessa forma, a próxima iteração se resume a 1 único problema com tamanho n/2. Dessa forma a=1, b=2. Repare também que na busca binária, ao realizar a iteração recursiva, obtemos a resposta sem a necessidade de processamento para combinação dos subproblemas. Isso porque a resposta é obtida diretamente na última iteração recursiva, onde temos K=z[n/2]. Dessa forma d=0</p>
+	<p>Com isso, temos os valores a=1, b=2, d=0, que se enquadra como Caso 1 do Master Theorem, com \( a=b^d \) e com um tempo de processamento \( O( \log n) \) </p>
+	</i>
+    </explanation>
+
+	<choice type="correct">
+		<text> a=1, b=2, d=0, com um tempo de processamento \( O( \log n) \)</text>
+		<explanation>
+			
+		</explanation>
+	</choice>
+
+	<choice type="incorrect">
+		<text>a=2, b=2, d=1, com um tempo de processamento \( O(n \log n) \)</text>
+		<explanation>
+		Repare que na busca binária, ao realizar a iteração recursiva, descartamos a metade do conjunto que não atende ao resultado esperado pela comparação de K com z[n/2]. Dessa forma, a próxima iteração se resume a 1 único problema com tamanho n/2. Dessa forma a=1
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>a=2, b=2, d=0, com um tempo de processamento \( O( \log n) \)</text>
+		<explanation>
+		Repare que na busca binária, ao realizar a iteração recursiva, descartamos a metade do conjunto que não atende ao resultado esperado pela comparação de K com z[n/2]. Dessa forma, a próxima iteração se resume a 1 único problema com tamanho n/2. Dessa forma a=1
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>a=1, b=2, d=1, com um tempo de processamento \( O(n) \)</text>
+		<explanation>
+		Repare que na busca binária, ao realizar a iteração recursiva, obtemos a resposta sem a necessidade de processamento para combinação dos subproblemas. Isso porque a resposta é obtida diretamente na última iteração recursiva, onde temos K=z[n/2]. Dessa forma d=0
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>a=1, b=2, d=0, com um tempo de processamento \( O(n \log n) \)</text>
+		<explanation>
+		Nesse caso, temos \( a=b^d \) que se enquadra no caso 1 do Master Theorem. Para essa situação temos como tempo de processamento: \( O(n^d \log n) = O(n^0 \log n) = O( \log n) \)	
+		</explanation>
+	</choice>
+
+
+</question>

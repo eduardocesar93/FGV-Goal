@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<question id="BGM-q6" level="1" subject="">
+
+    <text>
+       <p>Programação dinâmica ou <i>Dynamic Programming</i> é um paradigma algoritmico em que um problema principal é resolvido através da identificação de um conjunto de subproblemas, que são resolvidos um a um. As respostas dos subproblemas menores são utilizadas para resolver os subproblemas maiores, até que o problema principal seja resolvido. Um exemplo de problema que podemos utilizar esse paradigma para resolver é o problema de distância de edição. Esse problema consiste em dadas 2 strings, e as operações de: edit, delete e insert, quantas são as operações mínimas para transformar uma string na outra.</p>
+<p> Dadas 2 strings: <i>abcdef</i> e <i>azced</i>, calcule a distância de edição utilizando um número mínimo de operações para responder qual é alterantiva abaixo é verdadeira. </p>
+    </text>
+
+    <explanation>
+        <i>
+	
+	</i>
+    </explanation>
+
+	<choice type="correct">
+		<text> 
+		É necessário minimamente 3 operações para transformar a string <i>abcdef</i> em <i>azced</i>
+		</text>
+		<explanation>
+			
+		</explanation>
+	</choice>
+
+	<choice type="incorrect">
+		<text> 
+		É necessário minimamente 4 operações para transformar a string <i>abcdef</i> em <i>azced</i>
+		</text>
+		<explanation>
+		Verifique novamente as possibilidades de edit, delete e insert. É recomendado construir uma tabela de valores utilizando os caracteres de uma das palavras nas linhas e os caracteres de outra das palavras nas colunas.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text> 
+		É necessário minimamente 2 operações para transformar a string <i>abcdef</i> em <i>azced</i>
+		</text>
+		<explanation>
+		Verifique novamente as possibilidades de edit, delete e insert. É recomendado construir uma tabela de valores utilizando os caracteres de uma das palavras nas linhas e os caracteres de outra das palavras nas colunas.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text> 
+		O número mínimo de operações para transformar a string <i>abcdef</i> em <i>azced</i> utiliza, obrigatoriamente, todas as operações disponíveis: edit, delete e insert. Caso não tenhamos acesso a qualquer uma das operações,  iremos precisar aumentar o número mínimo de operações. 
+		</text>
+		<explanation>
+		Conseguimos manter o número mínimo de operações sem utilizar a operação de "insert" um caracter por exemplo, substituindo a por um "edit".
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text> 
+		O número mínimo de operações vai depender do algoritmo utilizado, não sendo possível afirmar quantas operações minimamente serão necessárias.
+		</text>
+		<explanation>
+		considere o algoritmo ótimo. Qual o número mínimo de operações possíveis?
+		</explanation>
+	</choice>
+
+
+</question>
