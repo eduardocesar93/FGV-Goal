@@ -4,7 +4,7 @@
 		<p>
 			Um algoritmo guloso é uma técnica de resolução de problemas de otimização. 
 			Segue abaixo um exemplo de algoritmo que soluciona o problema do <a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/mochila-frac.html">
-			machila fracionário</a>. Qual opção abaixo é correta?
+			mochila fracionária</a>. Qual opção abaixo é correta?
 		</p>
 <pre><code>Mochila-Fracionária (p, v, n, c)
 1  j ← n
