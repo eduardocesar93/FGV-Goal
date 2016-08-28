@@ -1,0 +1,22 @@
+Você é um mestre pokemon. Considere que sua função é destruir um inimigo com seu pokemon, e a resistência do inimigo é R. 
+O ataque do seu pokemon é igual a poder do doce que você oferece ao seu pokemon. Cada doce tem um peso e um poder. 
+Você recebeu uma mochila com capacidade máxima de carga Q para carregar seus doces. Sua missão é escolher os doces disponívies no pokestop, sem estourar a capacidade da mochila e maximizar o ataque ao inimigo. Você só pode carregar uma vez a mochila com doces. Doces não são partidos!
+
+
+A primeira linha da entrada contém um inteiro A que indica a quantidade de testes. Em cada teste, a primeira linha representa um inteiro X (o número de doces do pokestop) e as X linhas em seguida contém dois inteiros A e B que representam o poder do doce e seu peso. 
+A penúltima linha do teste contém a capacidade da mochila e a última a resistência do inimigo. 
+A saída deve conter se é possível destruir o inimigo ou não, respondendo S ou N em linhas diferentes para cada teste.
+
+
+Entrada
+1
+4
+21 10 
+10 4 
+10 4 
+10 4 
+12
+30 
+
+Saída
+S
