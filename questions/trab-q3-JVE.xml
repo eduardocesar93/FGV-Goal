@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question id="1" level="2" subject="teoremamestre">
+	<text>
+		<p>Para determinar a complexidade de algoritmos recursivos, podemos utilizar o 
+			<a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/recorrencias.html">Teorema Mestre</a>.
+			Para tanto deve-se encontrar a relação de recorrência. Para cada uma das recorrências abaixo, determine $T(n)$<br/>
+			$(i) - T(n) = T(n/2) + 2^n$<br/>
+			$(ii) - T(n) = 2T(n/2) + n\log{}n$<br/>
+			$(iii) - T(n) = 2T(n/4) + n^(0.51)$<br/>
+			$(iv) - T (n) = 4T(n/2) + \log{}$<br/>
+		</p>
+		<p>
+			Qual das alternativas abaixo está correta em relação ao Termo geral?
+		</p>
+	</text>
+	<choice type="correct">
+		<text> $i - T(n) = Θ(2^n)$ 
+		</text>
+		<explanation>
+			Trata-se do caso 3 do teorema mestre. 
+		</explanation>
+	</choice>
+	<choice type="correct">
+		<text>$ii - T(n) = Θ(n(\log{}n)^2$)</text>
+		<explanation>
+			Trata-se do caso 2 do teorema mestre.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>$iii - T(n) = Θ(n(\log{}n))$</text>
+		<explanation>
+			Utilizando o teorema mestre, caso 3, temos $T(n) = Θ(n^0.51)$
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>$iv - T(n) = Θ(n)$</text>
+		<explanation>
+			Utilizando, o teorema mestre, caso 1, temos $T(n) = Θ(n^2)$
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Seja $T1(n)$ o termo geral do item $(i)$ e seja $T2(n)$ a seolução do item $(iv)$,
+			  temos então que $T2(n) > T1(n)$ para n suficientemente grande.
+		</text>
+		<explanation>
+			Segundo o teorema mestre, temos que $T1(n) = Θ(2^n)$ e $T2(n) = Θ(n^2)$, 
+			logo $T1(n) > T2(n)$, para n suficientemente grande. 
+		</explanation>
+	</choice>
+</question>
