@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question id="1" level="1" subject="recursao">
+	<text>
+       <p>O problema da <a href="https://pt.wikipedia.org/wiki/Torre_de_Han%C3%B3i">Torre de Hanoi</a> pode ser solucionado de
+		  forma recursiva. Das afirmativas abaixo, selecione a correta.
+	   </p>
+	</text>
+    <explanation>
+		   <i>Uma versão online na forma de jogo para solucionar o problema pode ser 
+		   encontrada nesse <a href="https://www.ufrgs.br/psicoeduc/hanoi/">link</a>.</i>
+    </explanation>
+	<choice type="incorrect">
+		<text>O número de operações realizadas para transferir os discos de uma torre para outra é 5 quando o número de discos é $3$.</text>
+		<explanation>
+			O número de operações necessárias é $7$, facilmente pode-se verificar que $3$ operações são insuficientes. 
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>O número de operações cresce linearmente em relação ao número de discos.</text>
+		<explanation>
+			O número de operações cresce exponencialmente em relação ao número de discos. Uma demonstração mais detalhada
+			pode ser econtrada nesse <a href="http://www.obm.org.br/export/sites/default/revista_eureka/docs/artigos/hanoi.pdf">link</a>
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Para $4$ discos, o número de operações necessárias é $16$.</text>
+		<explanation>
+			O número de operações necessárias é $15$ nesse caso.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Uma torre de hanoi com o dobro de discos em relação a uma outra, deve precisar de um número de operações 
+			  duas vezes maior para ser resolvida.
+		</text>
+		<explanation>
+			O coportamento exponencial da <a href="http://www.obm.org.br/export/sites/default/revista_eureka/docs/artigos/hanoi.pdf">fórmula geral</a> 
+			($T(n) = 2^n - 1$) de operações necessárias impede que essa afirmativa seja verdadeira.
+		</explanation>
+	</choice>
+	<choice type="correct">
+		<text>A fórmula geral para o número de operações necessárias é ${2^n - 1}$.</text>
+		<explanation>
+			Podemos demonstrar essa relação a partir da recursão. Sendo $T(n)$ o número de operações necessárias para resolver
+			o problema com $n$ discos, pode-serelacionar esse valor recursivamente com o caso $n - 1$ a partir da seguinte relação:
+			$T(n) = 2*T(n - 1) + 1$. Resolvendo essa recursão, econtramos $T(n) = 2^n - 1$. Uma solução mais detalhada pode ser encontrada
+			nesse <a href="http://www.obm.org.br/export/sites/default/revista_eureka/docs/artigos/hanoi.pdf">link</a>.
+		</explanation>
+	</choice>
+</question>
