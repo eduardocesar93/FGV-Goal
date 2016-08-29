@@ -48,7 +48,7 @@ def listarQuestoes():
 	for file in os.listdir("questions"):
 		if file.endswith(".xml"):
 			files.append(file)
-	files.sort()
+	files.sort(key=lambda v: v.upper())
 	text = "<ul class='files'>"
 	for file in files:
 		text += ("<li>" + file.lower() + "  <a href='questao?file="+ file + "' class='consulta'>Consultar</a> | <a href='download?file=" + file + "' download='" + file + "'> Download</a></li>")
