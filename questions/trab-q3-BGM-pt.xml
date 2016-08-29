@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<question id="BGM-q3" level="2" subject="Guloso">
+
+	<text>
+       <p>Seja T = { (0 , 2) ; (3 , 5) ; (6 , 8) ; (9 , 11) ; (1 , 4) ; (1 , 4) ; (1 , 4) ; (4 , 7) ; (7 , 10) ; (7 , 10) ; (7 , 10) ; (11 , 15) ; (14 , 17); (16 , 20); (20 , 25); (21 , 23); (23 , 25)} um conjunto de 17 atividades que possuem um tempo específico de (inicio ,  fim) em minutos. Um engenheiro precisa identificar qual o numero maximo de atividades compatíveis (sem sobreposição) que podem ser agendadas no intervalo de tempo entre 0 e 25 minutos em uma única máquina de processamento. A máquina só consegue executar uma atividade de cada vez. Avalie e indique qual a melhor de todas as estrategias e, quando indicado, as respectivos atividades executadas, de forma que seja escolhido, dentre as alternativas possíveis, o maior subconjunto de atividades compatíveis.</p>
+
+  </text>
+
+    <explanation>
+        <i> A estratégia ótima para resolver esse tipo de problema, também conhecido como Interval Scheduling, é a estratégia de Executar Atividades com tempo de final mais cedo ou "Earliest finish time". Esse tipo de solução, utiliza a estratégia conhecida como "guloso" para fornecer uma solução ótima. Vamos provar que essa estratégia é ótima.
+		<p>Assumindo que a estratégia guloso não é ótima, vamos ver o que acontece:</p> 
+		<p>* Seja \( i_1 ,  i_2 , ...,  i_k \), um conjunto de atividades selecionadas pela estratégia do guloso.</p> 
+		<p>* Seja  \( j_1 ,  j_2 , ...,  j_k \), um conjunto de atividades selecionadas pela estratégia ótima com \(i_1  =  j_1 ,  i_2  =  j_2 , ...,  i_r  =  j_r\) para o maior valor possível de \( r \).</p>
+		<p>Considerando que existe uma atividade \(i_{r+1} \)que termina primeiro que \( j_{r+1} \). Não tem vantagem em escolhermos executar a atividade \( j_{r+1} \) para maximizar o subconjunto de atividades a serem executadas, logo, a estratégia ótima é a estratégia do guloso.</p>
+	</i>
+    </explanation>
+
+	<choice type="correct">
+		<text>Estratégia: Executar Atividades com tempo de final mais cedo. Essa estratégia possui complexidade assintótica de \( O(n \log n) \) e obrigatoriamente seleciona o maior número possível de atividades a serem executadas.</text>
+		<explanation>
+			
+		</explanation>
+	</choice>
+
+	<choice type="incorrect">
+		<text>Estratégia: Executar Atividades com Tempo de inicio mais cedo / Atividades executadas: (0,2),(3,5),(6,8), (9,11),(11,15),(16,20),(20,25)</text>
+		<explanation>
+		Poderiamos ter executados as atividades (21,23) e (23,25) ao invés da atividade (20,25) para maximizar o subconjunto de atividades compatíveis, logo a estratégia de Tempo de inicio mais cedo não é ótima.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Estratégia: Atividades mais curtas, ou atividades com menor intervalo entre o tempo de fim e o tempo de inicio / Atividades executadas:  (0,2),(3,5),(6,8),(9,11),(14,17),(21,23),(23,25)</text>
+		<explanation>
+		Poderiamos ter executados as atividades (11,15) e (16,20) ao invés da atividade (14,17) para maximizar o subconjunto de atividades compatíveis, logo a estratégia de Atividades mais curtas não é ótima.	
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Estratégia: Menor número de conflitos. Para cada atividade, contar o número de atividades conflitantes com a mesma e ordenar por ordem ascendente. Elencar as atividades a serem executadas utilizando essa ordem evitando sobreposições./ Atividades executadas:  (1,4),(4,7),(7,10),(11,15),(16,20),(21,23),(23,25)</text>
+		<explanation>
+		Poderiamos ter executados as atividades (0,2),(3,5),(6,8),(9,11) ao invés das atividades (1,4),(4,7),(7,10) para maximizar o subconjunto de atividades compatíveis, logo a estratégia de Menor número de conflitos não é ótima.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Não é possível definir para esse problema uma única estratégia ótima específica. É necessário, analisar manualmente cada uma das atividades utilizando diversas estratégias e combiná-las para tentar obter um resultado ótimo.</text>
+		<explanation>
+		É possível utilizar a estratégia de final de atividade mais cedo para obter um resultado ótimo. Nesse caso, aplicando essa estratégia teriamos a seguintes atividades executadas: (0,2),(3,5),(6,8),(9,11),(11,15),(16,20),(21,23),(23,25), totalizando 8 atividades.	
+		</explanation>
+	</choice>
+
+
+</question>

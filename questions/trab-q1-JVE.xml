@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question id="1" level="1" subject="complexidade">
+	<text>
+       <p> Na notação O (O-grande), classifique a ordem de complexidade do algoritmo abaixo descrito em pseudo-linguagem:</p>
+<pre><code>
+procedimento Ordenar(A : vetor, N: inteiro)
+   para j → 1 até N-1 faça
+      para i → 1 até N-1 faça
+	     se A[i] > A[i+1] então
+		    aux → A[i];
+			A[i] → A[i+1];
+			A[i+1] → aux;
+		 fim-se
+	  fim-para
+   fim-para 
+</code></pre>
+	</text>
+    <explanation>
+		   Uma breve explicação sobre a notação O pode ser encontrada no links: 
+		   <a href="http://web.mit.edu/16.070/www/lecture/big_o.pdf">Big O Notation</a>
+    </explanation>
+	<choice type="incorrect">
+		<text>$O(n\log{}n)$ </text>
+		<explanation>
+			O algoritmo possui complexidade de ordem $n^2$. Portanto pela definição da notação O, o algoritmo não é $O(n\log{}n)$
+		</explanation>
+	</choice>
+	<choice type="correct">
+		<text>$O(n^2)$ </text>
+		<explanation>
+			O algoritmo é composto de dois loops encadeados, ambos executados N - 1 vezes.
+			Assim o número de operações primitivas executadas é $(n - 1) * (n - 1) = n^2 - 2n + 1$, logo o algoritmo é $O(n^2)$.
+		</explanation>
+	</choice>
+	<choice type="correct">
+		<text>$O(n^3)$</text>
+		<explanation>
+			O algoritmo é composto de dois loops encadeados, ambos executados $N - 1$ vezes.
+			Assim o número de operações primitivas executadas é $(n - 1) * (n - 1) = n^2 - 2n + 1$, logo o algoritmo é $O(n^2)$,
+			portanto também é $O(n^3)$, pois $n^2$ é $n^3$. <a href="http://cs.stackexchange.com/questions/37721/prove-transitivity-of-big-o-notation"> Prova do Lema</a>
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>$O(n)$</text>
+		<explanation>
+			O algoritmo possui complexidade de ordem $x^2$. Portanto pela definição da notação O, o algoritmo não é $O(n)$. 
+			O algoritmo se propõe a ordenar uma lista genérica. Para conseguir fazê-lo em uma complexidade linear é necessária alguma condição
+			de contorno para o problema.<a href="https://www.quora.com/How-do-I-prove-that-a-comparison-based-sort-of-a-length-N-array-cannot-be-done-in-O-N-time-in-the-worst-case">Discussão</a> 
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>$O(1)$</text>
+		<explanation>
+			O algoritmo possui complexidade de ordem $x^2$. Portanto pela definição da notação O, o algoritmo não é $O(1)$.
+		</explanation>
+	</choice>
+</question>

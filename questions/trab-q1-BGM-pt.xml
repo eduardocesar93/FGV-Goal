@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<question id="BGM-q1" level="1" subject="Big-O Notation">
+
+	<text>
+       <p>Ordene as seguintes funções abaixo em ordem crescente de acordo com o seu "growth rate" (ou seja, g(n) posterior a f(n) na sua lista, se e somente se, f(n)=O(g(n))). </p>
+
+       $$ a(n)=n $$
+
+       $$ b(n)= \sqrt{n} $$
+
+       $$ c(n)=n^{2/3} $$
+
+       $$ d(n)=n^5 + n^4 + 3n^2 $$
+	
+       $$ e(n)=2^n $$
+
+       $$ f(n)=n^4. \log n $$
+
+       $$ g(n)=2^{n^2} $$
+   
+       $$ h(n)=2^{n^n} $$
+  </text>
+
+    <explanation>
+        <i>Na notação Big-O, dizemos que f=O(g) significa que "f" cresce não mais rápido do que "g", se e somente se, existe uma constante c tal que \( f(n) \le c.g(n) \). A notação Big-O permite o entendimento do crescimento das funções de uma forma macro. Vale apena relembrar importantes regras que ajudam na simplificação através da omissão de termos dominados, como segue: 1- Constatntes multiplicativas podem ser omitidas, 2- \( n^a \) domina \( n^b \), se \( a>b \), 3- exponencial domina polinomial, 4- polinomial domin logaritmo. Utilizando essas regras, podemos identificar a correta ordem de "growth rate", que é: b, c, a, f, d, e, g, h </i>
+    </explanation>
+
+	<choice type="correct">
+		<text>b, c, a, f, d, e</text>
+		<explanation>
+			
+		</explanation>
+	</choice>
+	<choice type="correct">
+		<text>b, c, a, e, g, h</text>
+		<explanation>
+			
+		</explanation>
+	</choice>
+	<choice type="correct">
+		<text>a, f, d, e, g, h</text>
+		<explanation>
+			
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>b, c, a, d, h, g</text>
+		<explanation>
+			Lembre que exponencial domina polinomial, logo g=O(h), ou seja, \( h(n) \) deve ser posterior a \( g(n) \)
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>b, c, a, e, f, d</text>
+		<explanation>
+			Lembre que exponencial domina polinomial, logo f=O(e) e d=O(e), ou seja,\( e(n) \) deve ser posterior a \( f(n) \) and \( d(n) \).
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>g, f, e, a, b, c</text>
+		<explanation>Tente estudar novamente as regras básicas para notação Big-O. Repare que se uma função "g" cresce mais rapidamente que uma função "f", então nós temos: f=O(g). Nessa situação \( g(n) \) deve ser posterior a \( f(n) \).
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>a, b, c, f, e, h</text>
+		<explanation>
+			Lembre que \( n^a \) domina \( n^b \), se \( a>b \), logo c=O(a), ou seja, \( a(n) \) deve ser posterior a \( c(n) \).
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>b, c, a, d, f, g</text>
+		<explanation>
+			Lembre que polinomial domina logaritmo, logo f=O(d), ou seja, \( d(n) \) deve ser posterior a \( f(n) \).
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+    		<text>b, c, e, g, h, d</text>
+    		<explanation>Lembre que exponencial domina polinomial, logo d=O(h), ou seja, \( h(n) \) deve ser posterior a \( d(n) \). The same applies to \( e(n) \) and \( g(n) \)</explanation>
+  	</choice>
+  	<choice type="incorrect">
+    		<text>e, g, c, a, f, d</text>
+    		<explanation>Lembre que exponencial domina polinomial, logo f=O(e), ou seja, \( e(n) \) deve ser posterior a \( f(n) \). Note também que d=O(e) pela mesma regra.</explanation>
+  	</choice>
+  	<choice type="incorrect">
+    		<text>f, d, c, a, e, g</text>
+    	<explanation>Lembre que \( n^a \) domina \( n^b \), se \( a>b \), logo a=O(f), ou seja, \( f(n) \) deve ser posterior \( a(n) \). answer.</explanation>
+  	</choice>
+  	<choice type="incorrect">
+    		<text>d, g, a, c, f, e</text>
+    		<explanation>Tente estudar novamente as regras básicas para notação Big-O. Repare que se uma função "g" cresce mais rapidamente que uma função "f", então nós temos: f=O(g). Nessa situação \( g(n) \) deve ser posterior a \( f(n) \). </explanation>
+	</choice>
+
+
+</question>
