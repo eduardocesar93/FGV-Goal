@@ -2,43 +2,47 @@
 <question id="1" level="2" subject="grafo">
 	<text>
 		<p>
-			O BFS é um agoritmo de busca em grafo. Utilizando esse algoritmo, uma ordem 
-			possível de vértices visitados é:
+			O BFS é um agoritmo de busca em grafo. Utilizando esse algoritmo, uma ordem possível de vértices visitados é:
 		</p><br/>
 		<img src="images/graph02.gif"/><br/>
 	</text>
 	<explanation>
-		BFS: Breadth First Search - <a href="http://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/bfs.html">Link para mais informações</a> 
+        <i>
+            BFS: Breadth First Search - <a href="https://pt.wikipedia.org/wiki/Busca_em_largura">Link para mais informações</a> 
+        </i>
 	</explanation>
 	<choice type="incorrect">
 		<text>M - N - O - P - Q - R</text>
 		<explanation>
-			Essa sequência não corresponde a uma sequência possível no BFS. Tente simular esse grafo nesse <a href="http://visualgo.net/dfsbfs">Link</a>
+			Essa sequência não corresponde a uma sequência possível no BFS. Corresponde na verdade
+            a uma sequência possível no DFS.
 		</explanation>
 	</choice>
 	<choice type="incorrect">
-		<text>N - Q - M - P - O - R</text>
+		<text>$N - Q - M - P - O - R$</text>
 		<explanation>
-			Essa sequência não corresponde a uma sequência possível no BFS. Tente simular esse grafo nesse <a href="http://visualgo.net/dfsbfs">Link</a>
+			O nó $O$ deve ser visitado antes do nó $P$, pois ele está a uma distância menor em número de arestas do
+            primeiro de nó de visita.
 		</explanation>
 	</choice>
 	<choice type="correct">
-		<text>Q - M - N - P - R - O</text>
+		<text>$Q - M - N - P - R - O$</text>
 		<explanation>
-			Essa sequência satisfaz todas as condições de uma sequência de visitas segundo o BFS.
+			Essa sequência corresponde a uma sequência conforme o algoritmo de BFS.
 		</explanation>
 	</choice>
 	<choice type="incorrect">
-		<text>Q - M - N - P - O - R</text>
+		<text>$Q - M - N - P - O - R$</text>
 		<explanation>
-			Essa sequência não corresponde a uma sequência possível no BFS. Tente simular esse grafo nesse <a href="http://visualgo.net/dfsbfs">Link</a>
+			O nó $O$ não deve ser visitado antes do nó $P$. No BFS antes todos os nós a uma distância $1$ devem ser visitados
+            antes do nós de distância $2$, em relação ao nó raiz da busca.
 		</explanation>
 	</choice>
 	<choice type="incorrect">
-		<text>R - M - N - O - P - Q
-		</text>
+		<text>$R - M - N - O - P - Q$</text>
 		<explanation>
-			Essa sequência não corresponde a uma sequência possível no BFS. Tente simular esse grafo nesse <a href="http://visualgo.net/dfsbfs">Link</a>
+			O nó $O$ não deve ser visitado antes do nó $Q$, em razão da sua distância menor em relação ao primeiro
+            nó de visita. Essa configuração corresponde a uma sequência DFS.
 		</explanation>
 	</choice>
 </question>

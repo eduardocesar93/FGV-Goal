@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <question id="1" level="2" subject="ordenacao">
 	<text>
-       <p> O algoritmo <a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/quick.html">Quick-Sort</a> é um algoritmo 
+       <p> O algoritmo <a href="https://pt.wikipedia.org/wiki/Quicksort">Quick-Sort</a> é um algoritmo 
 	   consogrado na computação devido sua grande eficiência, obtendo uma complexidade $O(n\log{}n)$ no caso médio. 
 	   Abaixo há uma implementação recursiva em pseudo-código do algoritmo</p>
 <pre><code>
@@ -40,22 +40,21 @@ fimprocedimento
 	<choice type="incorrect">
 		<text>$X[i] > pivo$ e $X[j] = IniVet$</text>
 		<explanation>
-			Confira essa <a href="https://gist.github.com/thilo-dev/7808978">implementação do Quick-Sort em Python</a> e 
-			a explicação do <a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/quick.html">Quick-Sort</a>.
+            O algoritmo precisa se chamar recursivamente em ambos os casos. No caso em que $j > InitVet$
+            essa chamada não ocorreu.
 		</explanation>
 	</choice>
 	<choice type="incrrect">
 		<text>$pivo > X[i]$ e $X[j] = IniVet$</text>
 		<explanation>
-			Confira essa <a href="https://gist.github.com/thilo-dev/7808978">implementação do Quick-Sort em Python</a> e 
-			a explicação do <a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/quick.html">Quick-Sort</a>.
+            Não é chamada recursiva no caso em que $j > InitVet$. Assim o comportamento do Quick-Sort não será
+            repetido recursivamente nesse caso.
 		</explanation>
 	</choice>
 	<choice type="incorrect">
 		<text>$pivo > X[i]$ e $QuickSort(X, i, FimVet)$</text>
 		<explanation>
-			Confira essa <a href="https://gist.github.com/thilo-dev/7808978">implementação do Quick-Sort em Python</a> e 
-			a explicação do <a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/quick.html">Quick-Sort</a>.
+            A chamada não recursiva não foi realizada em função de $j$ e portanto não faz sentido.
 		</explanation>
 	</choice>
 	<choice type="correct">
@@ -63,14 +62,14 @@ fimprocedimento
 		<explanation>
 			O Quick-Sort faz uma chamada recursiva nos dois vetores (à esquerda e direita) do pivo até que os vetores possuam 
 			tamanho 1. Caso o pivo escolhido seja o maior ou o menor elemento em todos os passos do algoritmo, o número de operações
-			realizadas é de ordem quadrática - $O(n^2)$, sendo esse o pior caso. 
+			realizadas é de ordem quadrática $O(n^2)$, sendo esse o pior caso. 
 		</explanation>
 	</choice>
 	<choice type="incorrect">
 		<text>$QuickSort(X, i, FimVet)$ e $QuickSort(X, IniVet, j)$</text>
 		<explanation>
-			Confira essa <a href="https://gist.github.com/thilo-dev/7808978">implementação do Quick-Sort em Python</a> e 
-			a explicação do <a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/quick.html">Quick-Sort</a>.
+			Um laço enquanto depende de uma condição em seu escopo. A função $Quick-Sort$ não tem retorno
+            então não deve ser utilizada como uma condição para o laço.
 		</explanation>
 	</choice>
 </question>

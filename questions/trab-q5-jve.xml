@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<question id="1" level="2" subject="guloso">
+<question id="1" level="3" subject="guloso">
 	<text>
 		<p>
 			Um algoritmo guloso é uma técnica de resolução de problemas de otimização. 
-			Segue abaixo um exemplo de algoritmo que soluciona o problema do <a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/mochila-frac.html">
-			mochila fracionária</a>. Qual opção abaixo é correta?
+			Segue abaixo um exemplo de algoritmo que soluciona o problema do <a href="https://en.wikipedia.org/wiki/Continuous_knapsack_problem">
+			machila fracionário</a>. Qual opção abaixo é correta?
 		</p>
 <pre><code>Mochila-Fracionária (p, v, n, c)
 1  j ← n
@@ -22,45 +22,48 @@
 	<explanation>
 		<i>
 			<ul>
-				<li>- n é o número de objetos</li>
-				<li>- cada objeto i tem peso pi e valor vi</li>
-				<li>- c é a capacidade da mochila e deve ser respeitada</li>
+				<li>- $n$ é o número de objetos</li>
+				<li>- cada objeto $i$ tem peso $pi$ e valor específico $vi$</li>
+				<li>- $c$ é a capacidade da mochila e deve ser respeitada</li>
+                <li>- $xi$ é o número de objetos selecionados de indíce $i$</li>
+                <li>- deseja-se preencher a mochila com o maior valor possível</li>
+                <li>- supor que os objetos já se encontram ordenados de forma decrescente em relação a $vi$</li>
 			</ul>
 		</i>
 	</explanation>
 	<choice type="incorrect">
 		<text>O algoritmo tem complexidade $O(n^2)$</text>
 		<explanation>
-			O algoritmo tem complexidade $O(n)$, o que é comum nos algoritmos gulosos.
+			O algoritmo tem complexidade $O(n)$, o que é comum nos algoritmos gulosos. Ele itera segundo uma condição sem realizar retornos (Backtracking).
 		</explanation>
 	</choice>
 	<choice type="incorrect">
-		<text>O algoritmo, além da técnica gulosa, utiliza <a href="https://pt.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms">dividir para conquistar</a></text>
+		<text>O algoritmo tem complexidade $O(1)$</text>
 		<explanation>
-			O método da divisão e conquista divide o problema em outros menores e os combina, utilizando geralmente recursão, 
-			não ocorre divisão do problema em menores.
+			A complexidade do algoritmo não é constante, pois o número de iterações realizadas depende de $n$, em razão do laço $para$ contido no algoritmo.
 		</explanation>
 	</choice>
 	<choice type="incorrect">
-		<text>O algoritmo da <a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/mochila-bool.html">mochila inteiro ou booleano</a>
-			  pode ser resolvido pela mesmo algoritmo acima.
+		<text> 
+            Esse algoritmo poderia ser utilizado caso os coeficientes $xi$ pudessem ser apenas inteiros.
 		</text>
 		<explanation>
-			A técnica gulosa não é eficiente para esse problema que pertenece inclusive à <a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/NPcompleto.html">classe NP</a>.
+			Essa ténica não poderá ser utilzada, pois poderia ser necessário, seguindo essa lógica, realizar retornos (Backtracking) para garantir a otimização.     
 		</explanation>
 	</choice>
 	<choice type="incorrect">
-		<text>No melhor caso, o algoritmo realiza um número constante de operações</text>
+		<text>O algoritmo tem complexidade $O(n^3)$</text>
 		<explanation>
-			No melhor caso, o número de operações realizadas é linear em relação ao tamanho da entrada.
+			O algoritmo tem complexidade $O(n)$, o que é comum nos algoritmos gulosos. Ele itera segundo uma condição sem realizar retornos (Backtracking).
 		</explanation>
 	</choice>
 	<choice type="correct">
 		<text>
-			A complexidade do algoritmo acima descrito é $O(n)$ dado que os objetos se econtram em ordem crescente de valor específico.
+			O fato dos coeficientes serem $xi$ serem reais permite que o algoritmo funcione corretamente.
 		</text>
 		<explanation>
-			A complexidade de fato é $O(n)$.
+			Como os coeficientes são reais, pode-se escolher valores fracionários para os coeficientes. Isso garante que o melhor objeto em termos de valor
+            específico possa sempre ser escolhido.
 		</explanation>
 	</choice>
 </question>

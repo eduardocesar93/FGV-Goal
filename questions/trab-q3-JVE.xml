@@ -2,12 +2,12 @@
 <question id="1" level="2" subject="teoremamestre">
 	<text>
 		<p>Para determinar a complexidade de algoritmos recursivos, podemos utilizar o 
-			<a href="http://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/recorrencias.html">Teorema Mestre</a>.
-			Para tanto deve-se encontrar a relação de recorrência. Para cada uma das recorrências abaixo, determine $T(n)$<br/>
-			$(i) - T(n) = T(n/2) + 2^n$<br/>
-			$(ii) - T(n) = 2T(n/2) + n\log{}n$<br/>
-			$(iii) - T(n) = 2T(n/4) + n^(0.51)$<br/>
-			$(iv) - T (n) = 4T(n/2) + \log{}$<br/>
+		   <a href="https://en.wikipedia.org/wiki/Master_theorem">Teorema Mestre</a>.
+           Para tanto deve-se encontrar a relação de recorrência. Para cada uma das recorrências abaixo, determine $T(n)$<br/>
+           $(i) - T(n) = T(n/2) + 2^n$<br/>
+           $(ii) - T(n) = 2T(n/2) + n\log{}n$<br/>
+           $(iii) - T(n) = 2T(n/4) + n^(0.51)$<br/>
+           $(iv) - T (n) = 4T(n/2) + \log{}$<br/>
 		</p>
 		<p>
 			Qual das alternativas abaixo está correta em relação ao Termo geral?
