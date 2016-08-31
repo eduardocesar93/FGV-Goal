@@ -4,15 +4,15 @@
 <!ELEMENT question (text,explanation,choice+) >
 <!ATTLIST question
 	  level   CDATA #REQUIRED
-	  subject CDATA #REQUIRED
+	  chapter CDATA #REQUIRED
 	  id      CDATA #REQUIRED >
 
 <!-- como fazer para aceitar qualquer tag aceita dentro de div (html:
   p, listas, tabela, quote) menos campos de formularios e formularios?
   talvez redeclarar apenas o que queremos? img, ul, li, ol, a etc -->
 
-<!ELEMENT text (#PCDATA|img|a|b|i)* >
-<!ELEMENT explanation (#PCDATA|img|a|b|i)* >
+<!ELEMENT text (#PCDATA|img|a|b|i|code|ul|ol|p)* >
+<!ELEMENT explanation (#PCDATA|img|a|b|i|code|ul|ol|p)* >
 
 <!ELEMENT choice (text,explanation) >
 <!ATTLIST choice
@@ -22,6 +22,18 @@
 <!ATTLIST a
 	  src %URI; #REQUIRED >
 
+<!ELEMENT ul (#PCDATA|li) >
+<!ATTLIST ul
+	  style %URI; #REQUIRED >
+
+<!ELEMENT ol (#PCDATA|li) >
+<!ATTLIST ol
+	  style %URI; #REQUIRED >
+
+<!ELEMENT code (#PCDATA) >
+<!ATTLIST code
+	  lang %URI; #REQUIRED >
+
 <!ELEMENT img (#PCDATA) >
 <!ATTLIST img
 	  href %URI; #REQUIRED 
@@ -29,3 +41,6 @@
 
 <!ELEMENT b (#PCDATA) >
 <!ELEMENT i (#PCDATA) >
+
+<!ELEMENT p (#PCDATA) >
+<!ELEMENT li (#PCDATA) >
