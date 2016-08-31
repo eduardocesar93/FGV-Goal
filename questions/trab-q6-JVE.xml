@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question id="1" level="2" subject="algoritmoguloso programacaodinamica">
+	<text>
+       <p>O problema do troco pode ser definido da seguinte maneira: <i> Dado um sistema monetário de moedas de 
+		valores $X1, X2, ..., Xn$, deseja-se produzir um troco de total $N$ com o menor número de moedas possíveis.</i> </p>
+		<p>Para as alternativas abaixo, determina qual é correta.</p>
+	</text>
+    <explanation>
+        <i>
+		   Uma breve explicação sobre o problema pode ser enontrada no seguinte link:
+		   <a href="https://pt.wikipedia.org/wiki/O_Problema_do_Troco_de_Frobenius">O Problema do Troco de Frobenius</a>
+        </i>
+    </explanation>
+	<choice type="incorrect">
+		<text>A solução do problema do troco (determinação das moedas a serem utilizadas) pode ser realizada em tempo constante $O(1)$</text>
+		<explanation>
+			O número de operações será no mínimo proporcional ao tempo para ler a entrada, que não é constante.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Caso o conjunto de moedas do sistema seja ${1, 4, 6}$ a solução gulosa é ótima (fornece o menor número de moedas)</text>
+		<explanation>
+			Contra-exemplo: $N = 8$, nesse caso temos $4 + 4 = 8$ sendo a solução ótima, em vez de $6 + 1 + 1 = 8$.
+		</explanation>
+	</choice>
+	<choice type="correct">
+		<text>A solução golusa pode ser ótima em alguns casos, como no exemplo do sistema monetário ${1, 5, 10, 50, 100}$.</text>
+		<explanation>
+			A solução gulosa é ótima em alguns casos específicos. Nesse exemplo, o algoritmo guloso é ótimo pois
+            toda moeda é múltipla da moeda imediatemente inferior.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Para o conjunto de moedas ${1, 5, 8}$ o troco no valor de $28$ pode ser fornecido no mínimo com $5$ moedas.</text>
+		<explanation>
+			O troco pode ser fornecido com $4$ moedas: $8 + 5 + 5 + 5 + 5 = 28$.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>Para o conjunto de moedas ${1, 5, 10, 50, 100}$ o troco no valor de $15$ pode ser obtido de maneira ótima com $5$ moedas.</text>
+		<explanation>
+			O troco pode ser fornecido com $2$ moedas: $10 + 5 = 15$.
+		</explanation>
+	</choice>
+</question>
