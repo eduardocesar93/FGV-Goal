@@ -44,24 +44,6 @@ questões, futuramente definidas em um Xml Schema são:
 - tags html :: qualquer tag html pode ser utilizada para formatação do
      texto.
   
-* Recomendações
-
-Um esquema será futuramente definido para validações dos arquivos xml,
-a fim de que as recomendações abaixo sejam atendidas.
-
-- As tags text explanation e option, devem ser filhas de question.
- 
-- As tags html podem se localizar em qualquer lugar do arquivo.
- 
-- Devem haver ao menos 5 opções, pelo menos 4 opções incorretas e pelo
-  menos 1 correta.
- 
-- O atributo correct de option é obrigatório e deve se restringir aos
-  valores 'correct' e 'incorrect'.
- 
-- Para a criação das questões e respostas deve seguir as sugestões do
-  GOAL.
-
 * Validação
 
 #+BEGIN_SRC bash
@@ -72,3 +54,39 @@ O template-2.xml terá ainda erros de validação. E o que falta é dizer
 que todas as tags de XHTML válida dentro de uma tag p devem ser
 válidas para <text> e <explanation>. Também falta declarar
 corretamente os atributos que recebem URIs.
+
+* Recomendações
+
+Um esquema será futuramente definido para validações dos arquivos xml,
+a fim de que as recomendações abaixo sejam atendidas.
+
+- As tags text explanation e option, devem ser filhas de question.
+ 
+- Qualquer tag html pode ocorrer dentro de question e explanation.
+ 
+- Devem haver ao menos 5 opções, pelo menos 4 opções incorretas e pelo
+  menos 1 correta.
+ 
+- O atributo correct de option é obrigatório e deve se restringir aos
+  valores 'correct' e 'incorrect'.
+ 
+- Para a criação das questões e respostas deve seguir as sugestões do
+  http://gradiance.com.
+
+- O atributo "level" deve indicar em de forma crescente a dificuldade
+  da questão, utilizando um número inteiro de 1 a 3.
+
+- O atributo "chapter", deve ser utilizado como referência ao número
+  do capítulo do livro Algorithms: Sanjoy Dasgupta, Christos
+  Papadimitriou, Umesh Vazirani - 1st edition. Utilizar apenas o
+  numeral referente ao capítulo.
+
+- O elemento <explantation> imediatamente após o enunciado da questão,
+  deve conter o gabarito da questão. Esse gabarito é divulgado para os
+  estudantes posteriormente ao deadline da conclusão das questões.
+
+- Dar preferência para referências auto-contidas. Caso necessário
+  fazer referência a links externos, utilizar sites estáveis, como:
+  WIKIPEDIA, STACKOVERFLOW, QUORA.
+
+- Figuras devem ter no máximo 900px x 600px, formato png ou svg.
