@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <question id="1" level="2" subject="algoritmoguloso programacaodinamica">
 	<text>
-       <p>O problema do troco pode ser definido da seguinte maneira: <i> Dado um sistema monetário de moedas (ou cédulas) de 
-		valores $X1, X2, ..., Xn$ e deseja-se produzir um troco de total $N$ com o menor número de moedas possíveis.</i> </p>
+       <p>O problema do troco pode ser definido da seguinte maneira: <i> Dado um sistema monetário de moedas de 
+		valores $X1, X2, ..., Xn$, deseja-se produzir um troco de total $N$ com o menor número de moedas possíveis.</i> </p>
 		<p>Para as alternativas abaixo, determina qual é correta.</p>
 	</text>
     <explanation>
-		   Uma breve explicação sobre o problema pode ser enontrada na seguinte página:
-		   <a href="http://crbonilha.com/pt/o-problema-do-troco/">O problema do troco</a>
+        <i>
+		   Uma breve explicação sobre o problema pode ser enontrada no seguinte link:
+		   <a href="https://pt.wikipedia.org/wiki/O_Problema_do_Troco_de_Frobenius">O Problema do Troco de Frobenius</a>
+        </i>
     </explanation>
 	<choice type="incorrect">
 		<text>A solução do problema do troco (determinação das moedas a serem utilizadas) pode ser realizada em tempo constante $O(1)$</text>
@@ -22,10 +24,10 @@
 		</explanation>
 	</choice>
 	<choice type="correct">
-		<text>A solução golusa pode ser ótima em alguns casos, como no exemplo do sistema monetário do Brasil.</text>
+		<text>A solução golusa pode ser ótima em alguns casos, como no exemplo do sistema monetário ${1, 5, 10, 50, 100}$.</text>
 		<explanation>
-			A solução gulosa é ótima nos casos que a <i>sequência é canônica</i>. Uma demonstração completa pode ser encontrada nesse 
-			<a href="http://www.or.deis.unibo.it/kp/Chapter2.pdf">link</a>
+			A solução gulosa é ótima em alguns casos específicos. Nesse exemplo, o algoritmo guloso é ótimo pois
+            toda moeda é múltipla da moeda imediatemente inferior.
 		</explanation>
 	</choice>
 	<choice type="incorrect">
@@ -35,10 +37,9 @@
 		</explanation>
 	</choice>
 	<choice type="incorrect">
-		<text>A solução por programação dinâmica nem sempre fornece a solução ótima.</text>
+		<text>Para o conjunto de moedas ${1, 5, 10, 50, 100}$ o troco no valor de $15$ pode ser obtido de maneira ótima com $5$ moedas.</text>
 		<explanation>
-			A solução a partir de programação dinâmica será sempre ótima para esse problema. No entanto, em alguns casos a solução gulosa já
-			basta e deve ser então escolhida preferencialmente devido sua menor complexidade.
+			O troco pode ser fornecido com $2$ moedas: $10 + 5 = 15$.
 		</explanation>
 	</choice>
 </question>

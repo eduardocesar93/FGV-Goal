@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE question SYSTEM "question.dtd">
+
+<question id="1" level="0" subject="Isabelle">
+  <text>
+  Considere os números de Peano definidos por:
+  
+  <code> datatype natural = Zero | Seguinte natural </code>
+
+  e a lista encadeada definida por:
+  
+  <code> datatype lista_encadeada = Vazio | Encadear lista_encadeada lista_encadeada </code>
+  
+  Queremos adaptar a definição da lista encadeada de forma a comportar listas de números de Peano; e definir uma função "ap-lista" que permita reduzir a lista a um número segundo qualquer função (soma, multiplicação, etc.) a um único número.
+  
+  Corrija o tipo "lista_encadeada" e apresente a assinatura de tipo para a função "ap_lista", e mostre como obter o produtório de uma lista.
+    .</text>
+  <explanation>Convém escrever as funções explicitamente para detectar erros.</explanation>
+  <choice type="correct">
+    <text>
+<code>	datatype 'a lista_encadeada    = Vazio | Encadear 'a "'a lista_encadeada"
+	fun ap_lista :: "(natural ⇒ natural) ⇒ natural ⇒  natural lista_encadeada ⇒ natural" where
+</code>
+	</text>
+    <explanation>Observe que para "ap_lista" é preciso incluir um argumento natural que representa o caso base. Caso contrário, a mesma função não poderia ser usada para o somatório e o produtório.</explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>
+<code>	datatype 'a lista_encadeada    = Vazio | Encadear "'a lista_encadeada" "'a lista_encadeada"
+	fun ap_lista :: "(natural ⇒ natural) ⇒ natural ⇒  natural lista_encadeada ⇒ natural" where
+</code>		</text>
+    <explanation>Observe que o tipo "lista_encadeada" assim definido gera uma lista de cada lado, isto é, uma árvore binária. Assim, não existe uma ordem única através da qual a função "ap-lista" possa proceder</explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>
+<code>	datatype 'a lista_encadeada    = Vazio | Encadear "'a lista_encadeada" "'a lista_encadeada"
+	fun ap_lista :: "(natural ⇒ natural) ⇒ natural ⇒  natural lista_encadeada ⇒ natural" where
+</code>
+		</text>
+    <explanation>Observe que o tipo "lista_encadeada" assim definido gera uma lista de cada lado, isto é, uma árvore binária. Assim, não existe uma ordem única através da qual a função "ap-lista" possa proceder. Ademais, para "ap_lista" é preciso incluir um argumento natural que representa o caso base. Caso contrário, a mesma função não poderia ser usada para o somatório e o produtório, por exemplo.
+	</explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>
+<code>	datatype 'a lista_encadeada    = Vazio | Encadear "'a lista_encadeada" "'a lista_encadeada"
+	fun ap_lista :: "(natural => natural => ⇒ natural) ⇒  natural lista_encadeada ⇒ natural" where
+</code>		</text>
+    <explanation>Observe que a função "ap_lista"  assim definida recebe uma função que já contém o caso base, quando o enunciado pede que receba uma função natural => natural e que o caso base seja declarado na chamada a ap_lista</explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>
+<code>	datatype 'a lista_encadeada    = Vazio | Encadear "'a lista_encadeada" "'a lista_encadeada"
+	fun ap_lista :: "(natural => natural => ⇒ natural) ⇒  natural lista_encadeada ⇒ natural" where
+</code?		</text>
+    <explanation>Observe que o tipo "lista_encadeada" assim definido gera uma lista de cada lado, isto é, uma árvore binária. Assim, não existe uma ordem única através da qual a função "ap-lista" possa proceder. Ademais, a função "ap_lista"  assim definida recebe uma função que já contém o caso base, quando o enunciado pede que receba uma função natural => natural e que o caso base seja declarado na chamada a ap_lista</explanation>
+  </choice>  
+</question>
