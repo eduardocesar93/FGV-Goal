@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<question id="VDF-MuliplEDaC-1" level="1" subject="MulplEdDaC">
+  <text>
+    <div>
+      Na multiplicação dos números binários x e y implementado por algoritmo divide-and-conquer, cada número é dividido ao meio, tal que x = 2^(n/2)*xh + xl e y = 2^(n/2)*yh + yl.
+      Considerando a multiplicação de 01001100 e 00101001, são passos na primeira iteração/recursão da solução do problema:
+    </div>
+  </text>
+
+  <choice type="correct">
+    <text>2^8 * 01000 * 0010</text>
+    <explanation>
+      <div>2^(n/2) * xh * 2^(n/2) * yh =</div>
+      <div>2^n * xh * yh = 2^8 * 0100 * 0010</div>
+    </explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>2^4 * 01000 * 0010</text>
+    <explanation>
+      <div>2^(n/2) * xh * 2^(n/2) * yh =</div>
+      <div>2^n * xh * yh = 2^8 * 0100 * 0010</div>
+    </explanation>
+  </choice>
+
+  <choice type="incorrect">
+    <text>2^8 * 0100 * 1001</text>
+    <explanation>
+      <div>2^(n/2) * xh * yl + 2^(n/2) * xl * yh =</div>
+      <div>2^(n/2) * (xh * yl + xl * yh) =</div>
+      <div>2^4(0100*1001 + 1100*0010)</div>
+    </explanation>
+  </choice>
+  <choice type="incorrect">
+    <text>2^8 * 1100 * 0010</text>
+    <explanation>
+      <div>2^(n/2) * xh * yl + 2^(n/2) * xl * yh =</div>
+      <div>2^(n/2) * (xh * yl + xl * yh) =</div>
+      <div>2^4(0100*1001 + 1100*0010)</div>
+    </explanation>
+  </choice>
+
+  <choice type="incorrect">
+    <text>01000 * 0010 + 1100 * 1001</text>
+    <explanation>
+      <div>não existe o passo xh * yh + xl * yl</div>
+    </explanation>
+  </choice>
+
+  <choice type="correct">
+    <text>0100 * 1001 + 1100 * 0010</text>
+    <explanation>
+      <div>trata-se do passo xh * yl + xl * yh:</div>
+      <div>2^(n/2) * xh * yl + 2^(n/2) * xl * yh =</div>
+      <div>2^(n/2) * (xh * yl + xl * yh)</div>
+    </explanation>
+  </choice>
+  <choice type="correct">
+    <text>0100 * 1001</text>
+    <explanation>
+      <div>trata-se do passo xh * yl:</div>
+      <div>2^(n/2) * xh * yl + 2^(n/2) * xl * yh =</div>
+      <div>2^(n/2) * (xh * yl + xl * yh)</div>
+    </explanation>
+  </choice>
+  <choice type="correct">
+    <text>1100 * 0010</text>
+    <explanation>
+      <div>trata-se do passo xl * yh:</div>
+      <div>2^(n/2) * xh * yl + 2^(n/2) * xl * yh =</div>
+      <div>2^(n/2) * (xh * yl + xl * yh)</div>
+    </explanation>
+  </choice>
+  
+
+</question>

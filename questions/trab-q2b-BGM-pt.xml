@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<question id="BGM-q2b" level="2" subject="Chapter3">
+
+	<text>
+       <p>Realize Depth-first search (DFS) no grafo a seguir. Sempre que existir uma escolha de vertices possíel, escolha pelo vértice que vem primeiro em ordem alfabética. Classifique as arestas em relação a: TREE, FORWARD, BACK ou CROSS e o respectivo número PRE e POST de cada vértice, de forma a responder a alternativa correta. </p>
+       <img src="images/graph01.png"/>	
+
+  </text>
+
+    <explanation>
+        <i>>A correta classificação é:
+<p>BACK: (g,b), (i,c), (d,a) - Arestas BACK conectam o vértice a um ancestral na árvore DFS.</p>
+<p>CROSS: (c,b), (d,h) - Arestas CROSS não se conectam nem a um descendente nem a um ancestral; elas se conectam a um vértice que já foi totalmente explorado.</p>
+FORWARD: nenhuma - Arestas FORWARD conectam o vértice a um vértice descendente que não é filho na árvore DFS.
+<p>PRE/POST de cada vértice: A:1/18, B:2/11, C:12/17, D:13/16, E:3/10, F:4/9, G:5/8, H:6/7, I:14/15</p></i>
+    </explanation>
+
+
+	<choice type="correct">
+		<text>O seguinte PRE/POST dos vértices está correto: A: 1/18, C: 12/17, I: 14/15. Adicionalmente, verificando esses valores de PRE/POST podemos concluir que a aresta (i,c) é do tipo BACK.</text>
+		<explanation>
+			
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+    		<text>O seguinte PRE/POST dos vértices está correto: A: 1/18, B: 3/12, G: 6/9. Adicionalmente, verificando esses valores de PRE/POST podemos concluir que a aresta (g,b) é do tipo BACK.</text>
+    		<explanation>Verifique o PRE/POST dos vértices B e G. Lembre que, conforme enunciado, obrigatoriamente a ordem de vértices a serem visitados deve seguir a ordem alfabética.
+		</explanation>
+  	</choice>
+  	<choice type="incorrect">
+    		<text>O seguinte PRE/POST dos vértices está correto: E: 3/10, F: 5/8, G: 6/8. Adicionalmente, verificando esses valores de PRE/POST podemos concluir que a aresta (g,b) é do tipo BACK. </text>
+    		<explanation>
+		Essa opção não está correta. Os valores PRE/POST de B não foram mencionados. Além disso, os valores POST dos vérice F e G aparecem com o mesmo valor, o que não é possível.
+		</explanation>
+  	</choice>
+  	<choice type="incorrect">
+    		<text>Arestas BACK levam a um ancestrar na árvore DFS e arestas CROSS levam a um vértice que ainda não foi completamente visitado. Utilizando essas definições, podemos indicar que a aresta (g,b) é do tipo BACK e a aresta (c,b) é do tipo CROSS. </text>
+    	<explanation>
+	A definição de aresta CROSS não está correta. Repare que ao examinarmos (c,b), o vértice B já foi completamente visitado.
+	</explanation>
+  	</choice>
+  	<choice type="incorrect">
+    		<text>Os seguintes valores de PRE/POST estão corretos: A: 1/19, B: 2/11, I: 14/15, D:13/16. </text>
+    		<explanation>the PRE/POST do vértice A não está correto. O valor correto PRE/POST para A é: 1/18
+		 </explanation>
+	</choice>
+</question>

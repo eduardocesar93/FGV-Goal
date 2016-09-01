@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<question id="VDF-MultiplBinDac-2" level="2" subject="MultiplBindDaC">
+  <text>A mltiplicação de binários de 128bits por  por algoritmo divide-and-conquer:</text>
+
+  <choice type="correct">
+    <text>requer 7 níveis de recursão (chamada de função pela própria função)</text>
+  </choice>
+
+  <choice type="incorrect">
+    <text>requer no total 7 chamadas da função de multiplicação</text>
+    <explanation>
+      cada nível de divisão (e.g., de 32 para 16 bits) requer uma chamada para cada multiplicação resultante
+    </explanation>
+  </choice>
+  
+  <choice type="incorrect">
+    <text>cada nível de recursão requer 3 chamadas recursivas para resolver as operações de multiplicação resultantes da divisão do binário.</text>
+    <explanation>
+      cada divisão do binário resulta em quatro operações de multiplicação.
+    </explanation>
+  </choice>
+
+  <choice type="correct">
+    <text>cada nível de recursão requer 4 operações não recursivas de adição.</text>
+    <explanation>
+      cada nível possui a seguinte estrutura: 2^n * PB1 + 2^(n/2) * (PB2 + PB3) + PB4, sendo PB o produto binário.
+    </explanation>
+  </choice>
+
+  <choice type="correct">
+    <text>o algoritmo calcula diretamente apenas o produto de dois bits isolados, ou seja, 0*0, 0*1 ou 1*1</text>
+    <explanation>
+      enquanto o produto desejado envolver números com dois ou mais bits, haverá recursão, isto é, não haverá cálculo direto;
+      a multiplicação do produto binário pelo fator 2^n ou 2^(n/2) é feito por "bit shift", que tem custo muito menor.
+    </explanation>
+  </choice>
+
+  <choice type="incorrect">
+    <text>o algoritmo calcula diretamente apenas o soma de dois bits isolados, ou seja, 0+0, 0+1 ou 1+1</text>
+    <explanation>a lógica do algoritmo é calcular o produto de maneira indireta (por meio de adições e bit shifts), que ocorrem em todos os níveis de recursão.</explanation>
+  </choice>
+
+</question>
