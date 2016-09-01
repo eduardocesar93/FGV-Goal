@@ -1,6 +1,8 @@
-#+Title: Projeto do Curso ED 2016.2 
+﻿#+Title: Projeto do Curso ED 2016.2 
 
 * Introdução
+
+/Demo/ http://fgv-goal.mybluemix.net
    
 Um padrão para montagem de arquivos foi estabelicido para auxiliar a
 manutenção de um baco de questões colaborativo inspirado no [[http://www.newgradiance.com/downloads/auth-guide.pdf][GOAL -
@@ -21,8 +23,7 @@ questões, futuramente definidas em um Xml Schema são:
   - level :: inteiro de 1 a 3, indicando em de forma crescente a
     dificuldade da questão.
 	
-  - subject :: string qualquer indiciando o assunto relativo à
-       questão.
+  - chapter :: número indicando o capítulo de referência do livro texto.
     
   - id :: indetificador único para a questão.
 	
@@ -57,6 +58,18 @@ a fim de que as recomendações abaixo sejam atendidas.
  
 - Para a criação das questões e respostas deve seguir as sugestões do
   GOAL.
+ 
+- Os sites utilizados como referência devem estar nessa lista::
+
+  - https://www.wikipedia.org/
+  
+  - https://www.quora.com/
+  
+  - http://cs.stackexchange.com/
+  
+  - http://math.stackexchange.com/
+  
+  - http://stackoverflow.com/
 
 * Validação
 
@@ -68,3 +81,23 @@ O template-2.xml terá ainda erros de validação. E o que falta é dizer
 que todas as tags de XHTML válida dentro de uma tag p devem ser
 válidas para <text> e <explanation>. Também falta declarar
 corretamente os atributos que recebem URIs.
+
+* Desenvolvimento
+
+Para colaboração com o repositório, deve-se consultar as Issues do repositório de desenvolvimento https://github.com/eduardocesar93/FGV-Goal. Abaixo segue um passo a passo para executar o sistema localmente. 
+
+- Possui interpretador Python https://www.python.org/ e um editor de texto.
+
+- Recomenda-se estudar a documentação do Flask http://flask.pocoo.org/, que é a microframework utilizada junto ao python.
+
+- Os pacotes python utilizados utilizados devem ser adicionados ao arquivo 'requirements.txt', caso não possua alguns dos pacotes instalados pode-se instalá-lo a partir do comando:
+#+BEGIN_SRC bash
+pip install nomedopacote
+#+END_SRC
+
+- Para executar o sistema localmente, deve-se no diretório do projeto executar o comando:
+#+BEGIN_SRC bash
+python app.py
+#+END_SRC
+
+- A página inicial do sistema estará disponível em http://localhost:8080 e pode ser acessada a partir de qualquer navegador.

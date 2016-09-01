@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<question id="1" level="1" subject="complexidade">
+<question id="1" level="2" subject="complexidade">
 	<text>
        <p> Na notação O (O-grande), classifique a ordem de complexidade do algoritmo abaixo descrito em pseudo-linguagem:</p>
 <pre><code>
 procedimento Ordenar(A : vetor, N: inteiro)
-	para j → 1 até N-1 faça
-		para i → 1 até N-1 faça
-			se A[i] > A[i+1] então
-				aux → A[i];
-				A[i] → A[i+1];
-				A[i+1] → aux;
-			fim-se
-		fim-para
-	fim-para 
+   para j → 1 até N-1 faça
+      para i → 1 até N-1 faça
+	     se A[i] > A[i+1] então
+		    aux → A[i];
+			A[i] → A[i+1];
+			A[i+1] → aux;
+		 fim-se
+	  fim-para
+   fim-para 
 </code></pre>
 	</text>
     <explanation>
-		   Uma breve explicação sobre a notação O pode ser encontrada no links: 
-		   <a href="http://web.mit.edu/16.070/www/lecture/big_o.pdf">Big O Notation</a>
+        <i>
+           Uma breve explicação sobre a notação O pode ser encontrada no links: 
+           <a href="https://pt.wikipedia.org/wiki/Complexidade">Big O Notation</a>
+        </i>
     </explanation>
 	<choice type="incorrect">
 		<text>$O(n\log{}n)$ </text>
@@ -37,7 +39,7 @@ procedimento Ordenar(A : vetor, N: inteiro)
 		<explanation>
 			O algoritmo é composto de dois loops encadeados, ambos executados $N - 1$ vezes.
 			Assim o número de operações primitivas executadas é $(n - 1) * (n - 1) = n^2 - 2n + 1$, logo o algoritmo é $O(n^2)$,
-			portanto também é $O(n^3)$, pois $n^2$ é $n^3$. <a href="http://cs.stackexchange.com/questions/37721/prove-transitivity-of-big-o-notation"> Prova do Lema</a>
+			portanto também é $O(n^3)$, pois $n^2$ é $O(n^3)$. <a href="http://cs.stackexchange.com/questions/37721/prove-transitivity-of-big-o-notation"> Prova do Lema</a>
 		</explanation>
 	</choice>
 	<choice type="incorrect">

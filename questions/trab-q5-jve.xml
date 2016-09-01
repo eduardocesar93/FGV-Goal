@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question id="1" level="3" subject="guloso">
+	<text>
+		<p>
+			Um algoritmo guloso é uma técnica de resolução de problemas de otimização. 
+			Segue abaixo um exemplo de algoritmo que soluciona o problema do <a href="https://en.wikipedia.org/wiki/Continuous_knapsack_problem">
+			machila fracionário</a>. Qual opção abaixo é correta?
+		</p>
+<pre><code>Mochila-Fracionária (p, v, n, c)
+1  j ← n
+2  enquanto  j ≥ 1  e  pj ≤ c  faça
+3     xj ← 1
+4     c ← c − pj
+5     j ← j − 1
+6  se  j ≥ 1  então
+7     xj ← c/pj
+8     para  i ← j−1  decrescendo até  1  faça
+9        xi ← 0
+10 devolva  x
+</code></pre>
+	</text>
+	<explanation>
+		<i>
+			<ul>
+				<li>- $n$ é o número de objetos</li>
+				<li>- cada objeto $i$ tem peso $pi$ e valor específico $vi$</li>
+				<li>- $c$ é a capacidade da mochila e deve ser respeitada</li>
+                <li>- $xi$ é o número de objetos selecionados de indíce $i$</li>
+                <li>- deseja-se preencher a mochila com o maior valor possível</li>
+                <li>- supor que os objetos já se encontram ordenados de forma decrescente em relação a $vi$</li>
+			</ul>
+		</i>
+	</explanation>
+	<choice type="incorrect">
+		<text>O algoritmo tem complexidade $O(n^2)$</text>
+		<explanation>
+			O algoritmo tem complexidade $O(n)$, o que é comum nos algoritmos gulosos. Ele itera segundo uma condição sem realizar retornos (Backtracking).
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>O algoritmo tem complexidade $O(1)$</text>
+		<explanation>
+			A complexidade do algoritmo não é constante, pois o número de iterações realizadas depende de $n$, em razão do laço $para$ contido no algoritmo.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text> 
+            Esse algoritmo poderia ser utilizado caso os coeficientes $xi$ pudessem ser apenas inteiros.
+		</text>
+		<explanation>
+			Essa ténica não poderá ser utilzada, pois poderia ser necessário, seguindo essa lógica, realizar retornos (Backtracking) para garantir a otimização.     
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>O algoritmo tem complexidade $O(n^3)$</text>
+		<explanation>
+			O algoritmo tem complexidade $O(n)$, o que é comum nos algoritmos gulosos. Ele itera segundo uma condição sem realizar retornos (Backtracking).
+		</explanation>
+	</choice>
+	<choice type="correct">
+		<text>
+			O fato dos coeficientes serem $xi$ serem reais permite que o algoritmo funcione corretamente.
+		</text>
+		<explanation>
+			Como os coeficientes são reais, pode-se escolher valores fracionários para os coeficientes. Isso garante que o melhor objeto em termos de valor
+            específico possa sempre ser escolhido.
+		</explanation>
+	</choice>
+</question>

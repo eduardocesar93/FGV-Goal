@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html >
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,17 +67,26 @@
 					{% endwith %}
 					<div>
 						<h2>Submissão de Questões</h2>
-						<p>Para uma submissão ser aceita ela deve seguir algumas restrições ...</p>
-						<p>Para mais informações sobre xml... conforme template:</p>
+						<p>Para uma submissão ser aceita ela deve seguir o template XML abaixo.</p>
+						<p>Para mais informações sobre o padrão XML consulte esse link: <a href="http://www.w3schools.com/xml/">W3 Schools</a>.</p>
 <pre class="prettyprint">
-&lt;question&gt;
-	template de question todo
-	&lt;choice&gt;
-		Opção...
-	&lt;/choice&gt;
-&lt;question&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;question id="1" level="0" subject="graphs"&gt;
+   &lt;text&gt;o texto da questão.&lt;/text&gt;
+   &lt;explanation&gt;a explicação.&lt;/explanation&gt;
+   &lt;choice type="correct"&gt;
+      &lt;text&gt;primeira possivel resposta&lt;/text&gt;
+      &lt;explanation&gt;explicacao da resposta&lt;/explanation&gt;
+   &lt;/choice&gt;
+   &lt;choice type="incorrect"&gt;
+      &lt;text&gt;segunda possivel resposta&lt;/text&gt;
+      &lt;explanation&gt;segunda explicacao da resposta&lt;/explanation&gt;
+   &lt;/choice&gt;
+&lt;/question&gt;
 </pre>
-						<p>Beleza.</p>
+						<p>Você pode fazer o upload de várias imagens para melhor compreensão da questão. Tags html são reconhecidas e aconselhadas
+                            para melhor experiência na resolução da questão. Links para aprendizado são desejáveis.
+                        </p>
 						<button type="button" class="btn btn-primary btn-lg btn-green" data-toggle="modal" data-target="#myModal">
 							Upload
 						</button>
@@ -127,7 +136,7 @@
 		</main>
 	</body>
 	<footer>
-	  <p>Rodapé genérico <a href="http://getbootstrap.com">referencia</a> qualquer</p>
+	  <p> Link para envio de questões pelo <a href="https://github.com/arademaker/ed-2016.2">github</a>.</p>
 	  <p>
 		<a href="#">Ir para o topo</a>
 	  </p>
