@@ -1,7 +1,11 @@
 #+Title: Projeto do Curso ED 2016.2 
 
 * Introdução
-   
+
+/Demo/ http://fgv-goal.mybluemix.net
+
+/Tutorial para desenvolver/ https://github.com/eduardocesar93/FGV-Goal/wiki/Tutoriais
+
 Um padrão para montagem de arquivos foi estabelicido para auxiliar a
 manutenção de um baco de questões colaborativo inspirado no [[http://www.newgradiance.com/downloads/auth-guide.pdf][GOAL -
 Gradiance On-Line Accelerated Learning]]
