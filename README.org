@@ -84,27 +84,20 @@ corretamente os atributos que recebem URIs.
 
 * Desenvolvimento
 
-Para colaboração com o repositório, deve-se consultar as Issues do 
-repositório de desenvolvimento https://github.com/eduardocesar93/FGV-Goal. 
-Abaixo segue um passo a passo para executar o sistema localmente. 
+Para colaboração com o repositório, deve-se consultar as Issues do repositório de desenvolvimento https://github.com/eduardocesar93/FGV-Goal. Abaixo segue um passo a passo para executar o sistema localmente. 
 
 - Possui interpretador Python https://www.python.org/ e um editor de texto.
 
-- Recomenda-se estudar a documentação do Flask http://flask.pocoo.org/, que 
-é a microframework utilizada junto ao python.
+- Recomenda-se estudar a documentação do Flask http://flask.pocoo.org/, que é a microframework utilizada junto ao python.
 
-- Os pacotes python utilizados utilizados devem ser adicionados ao arquivo 
-'requirements.txt', caso não possua alguns dos pacotes instalados pode-se 
-instalá-lo a partir do comando:
+- Os pacotes python utilizados utilizados devem ser adicionados ao arquivo 'requirements.txt', caso não possua alguns dos pacotes instalados pode-se instalá-lo a partir do comando:
 #+BEGIN_SRC bash
 pip install nomedopacote
 #+END_SRC
 
-- Para executar o sistema localmente, deve-se no diretório do projeto executar 
-o comando:
+- Para executar o sistema localmente, deve-se no diretório do projeto executar o comando:
 #+BEGIN_SRC bash
 python app.py
 #+END_SRC
 
-- A página inicial do sistema estará disponível em http://localhost:8080 e pode 
-ser acessada a partir de qualquer navegador.
+- A página inicial do sistema estará disponível em http://localhost:8080 e pode ser acessada a partir de qualquer navegador.
