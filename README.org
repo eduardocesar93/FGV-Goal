@@ -2,9 +2,9 @@
 
 * Introdução
 
-/Demo/ http://fgv-goal.mybluemix.net
+*Demo* http://fgv-goal.mybluemix.net
 
-/Tutorial para desenvolver/ https://github.com/eduardocesar93/FGV-Goal/wiki/Tutoriais
+*Tutorial para desenvolver* https://github.com/eduardocesar93/FGV-Goal/wiki/Tutoriais
 
 Um padrão para montagem de arquivos foi estabelicido para auxiliar a
 manutenção de um baco de questões colaborativo inspirado no [[http://www.newgradiance.com/downloads/auth-guide.pdf][GOAL -
@@ -20,28 +20,28 @@ informações podem ser encontradas nas seguintes fontes:
 As tags e seus respectivos atributos, que usaremos na produção das
 questões, futuramente definidas em um Xml Schema são:
  
-- question :: tag raiz do documento.
+- question: tag raiz do documento.
 
-  - level :: inteiro de 1 a 3, indicando em de forma crescente a
+  - level: inteiro de 1 a 3, indicando em de forma crescente a
     dificuldade da questão.
 	
-  - chapter :: inteiro indicando o número do capítulo relativo à
+  - chapter: inteiro indicando o número do capítulo relativo à
        questão.
     
-  - id :: indetificador único para a questão.
+  - id: indetificador único para a questão.
 	
-- text :: uma área de texto, que pode estar no enunciado ou no corpo de
+- text: uma área de texto, que pode estar no enunciado ou no corpo de
   uma opção.
  
-  - choice :: opção da questão.
+  - choice: opção da questão.
  
-  - type :: string (correct ou incorrect), indicando se a opção está
+  - type: string (correct ou incorrect), indicando se a opção está
     correta ou não.
 		
-- explanation :: explicação para uma determinada opção estar correta ou
+- explanation: explicação para uma determinada opção estar correta ou
   falsa.
  
-- tags html :: qualquer tag html pode ser utilizada para formatação do
+- tags html: qualquer tag html pode ser utilizada para formatação do
      texto.
   
 * Validação
