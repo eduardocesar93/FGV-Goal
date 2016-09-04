@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<question id="1" level="2" subject="complexidade">
+<question level="2" chapter="0">
 	<text>
        <p> Na notação O (O-grande), classifique a ordem de complexidade do algoritmo abaixo descrito em pseudo-linguagem:</p>
 <pre><code>
@@ -15,12 +15,6 @@ procedimento Ordenar(A : vetor, N: inteiro)
    fim-para 
 </code></pre>
 	</text>
-    <explanation>
-        <i>
-           Uma breve explicação sobre a notação O pode ser encontrada no links: 
-           <a href="https://pt.wikipedia.org/wiki/Complexidade">Big O Notation</a>
-        </i>
-    </explanation>
 	<choice type="incorrect">
 		<text>$O(n\log{}n)$ </text>
 		<explanation>

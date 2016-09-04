@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<question id="1" level="3" subject="guloso">
+<question level="2" chapter="5">
 	<text>
 		<p>
 			Um algoritmo guloso é uma técnica de resolução de problemas de otimização. 
 			Segue abaixo um exemplo de algoritmo que soluciona o problema do <a href="https://en.wikipedia.org/wiki/Continuous_knapsack_problem">
-			machila fracionário</a>. Qual opção abaixo é correta?
+			mochila fracionário</a>. Qual opção abaixo é correta?
 		</p>
 <pre><code>Mochila-Fracionária (p, v, n, c)
-1  j ← n
-2  enquanto  j ≥ 1  e  pj ≤ c  faça
-3     xj ← 1
-4     c ← c − pj
-5     j ← j − 1
-6  se  j ≥ 1  então
-7     xj ← c/pj
-8     para  i ← j−1  decrescendo até  1  faça
-9        xi ← 0
-10 devolva  x
+   j ← n
+   enquanto  j ≥ 1  e  pj ≤ c  faça
+      xj ← 1
+      c ← c − pj
+      j ← j − 1
+   se  j ≥ 1  então
+      xj ← c/pj
+      para  i ← j−1  decrescendo até  1  faça
+         xi ← 0
+   devolva  x
 </code></pre>
-	</text>
-	<explanation>
 		<i>
 			<ul>
 				<li>- $n$ é o número de objetos</li>
@@ -30,17 +28,17 @@
                 <li>- supor que os objetos já se encontram ordenados de forma decrescente em relação a $vi$</li>
 			</ul>
 		</i>
-	</explanation>
 	<choice type="incorrect">
-		<text>O algoritmo tem complexidade $O(n^2)$</text>
+		<text>O algoritmo é eficiente pois realiza retornos (Backtrackings) para otimização </text>
 		<explanation>
-			O algoritmo tem complexidade $O(n)$, o que é comum nos algoritmos gulosos. Ele itera segundo uma condição sem realizar retornos (Backtracking).
+			O algoritmo itera segundo um critério sem realizar retornos (Backtracking), o que caracteriza um algoritmo guloso.
 		</explanation>
 	</choice>
 	<choice type="incorrect">
-		<text>O algoritmo tem complexidade $O(1)$</text>
+		<text>O algoritmo realiza um número constante de operações.</text>
 		<explanation>
-			A complexidade do algoritmo não é constante, pois o número de iterações realizadas depende de $n$, em razão do laço $para$ contido no algoritmo.
+			O número de operações realizadas não é constante, pois o número de iterações realizadas depende de $n$, 
+			em razão do laço $para$ contido no algoritmo.
 		</explanation>
 	</choice>
 	<choice type="incorrect">
@@ -48,13 +46,14 @@
             Esse algoritmo poderia ser utilizado caso os coeficientes $xi$ pudessem ser apenas inteiros.
 		</text>
 		<explanation>
-			Essa ténica não poderá ser utilzada, pois poderia ser necessário, seguindo essa lógica, realizar retornos (Backtracking) para garantir a otimização.     
+			Essa ténica não poderá ser utilzada, pois poderia ser necessário, seguindo essa lógica, 
+			realizar retornos (Backtracking) para garantir a otimização.     
 		</explanation>
 	</choice>
 	<choice type="incorrect">
-		<text>O algoritmo tem complexidade $O(n^3)$</text>
+		<text>O algoritmo adiciona à mochila sempre o objeto de menor valor e isso garante a corretude na solução.</text>
 		<explanation>
-			O algoritmo tem complexidade $O(n)$, o que é comum nos algoritmos gulosos. Ele itera segundo uma condição sem realizar retornos (Backtracking).
+			O algoritmo adiciona sempre o objeto de menor valor específico. Isso que garante a corretude na solução do problema.
 		</explanation>
 	</choice>
 	<choice type="correct">

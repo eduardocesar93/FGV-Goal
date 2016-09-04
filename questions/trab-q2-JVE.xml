@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<question id="1" level="2" subject="ordenacao">
+<question level="2" chapter="2">
 	<text>
        <p> O algoritmo <a href="https://pt.wikipedia.org/wiki/Quicksort">Quick-Sort</a> é um algoritmo 
 	   consogrado na computação devido sua grande eficiência, obtendo uma complexidade $O(n\log{}n)$ no caso médio. 

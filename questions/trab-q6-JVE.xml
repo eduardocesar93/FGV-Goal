@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<question id="1" level="2" subject="algoritmoguloso programacaodinamica">
+<question level="3" chapter="6">
 	<text>
        <p>O problema do troco pode ser definido da seguinte maneira: <i> Dado um sistema monetário de moedas de 
 		valores $X1, X2, ..., Xn$, deseja-se produzir um troco de total $N$ com o menor número de moedas possíveis.</i> </p>
-		<p>Para as alternativas abaixo, determina qual é correta.</p>
-	</text>
-    <explanation>
-        <i>
+		<p>Para as alternativas abaixo, determind qual é correta.</p>
+		 <i>
 		   Uma breve explicação sobre o problema pode ser enontrada no seguinte link:
 		   <a href="https://pt.wikipedia.org/wiki/O_Problema_do_Troco_de_Frobenius">O Problema do Troco de Frobenius</a>
         </i>
-    </explanation>
-	<choice type="incorrect">
-		<text>A solução do problema do troco (determinação das moedas a serem utilizadas) pode ser realizada em tempo constante $O(1)$</text>
-		<explanation>
-			O número de operações será no mínimo proporcional ao tempo para ler a entrada, que não é constante.
-		</explanation>
-	</choice>
+	</text>
 	<choice type="incorrect">
 		<text>Caso o conjunto de moedas do sistema seja ${1, 4, 6}$ a solução gulosa é ótima (fornece o menor número de moedas)</text>
 		<explanation>
@@ -28,6 +20,12 @@
 		<explanation>
 			A solução gulosa é ótima em alguns casos específicos. Nesse exemplo, o algoritmo guloso é ótimo pois
             toda moeda é múltipla da moeda imediatemente inferior.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>A solução do problema do troco (determinação das moedas a serem utilizadas) pode ser realizada em tempo constante.</text>
+		<explanation>
+			O número de operações será no mínimo proporcional ao tempo para ler a entrada, que não é constante.
 		</explanation>
 	</choice>
 	<choice type="incorrect">

@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<question id="1" level="2" subject="grafo">
+<question level="2" chapter="4">
 	<text>
 		<p>
 			O BFS é um agoritmo de busca em grafo. Utilizando esse algoritmo, uma ordem possível de vértices visitados é:
 		</p><br/>
 		<img src="images/graph02.gif"/><br/>
+		<i>BFS: Breadth First Search - <a href="https://pt.wikipedia.org/wiki/Busca_em_largura">Link para mais informações</a></i>
 	</text>
-	<explanation>
-        <i>
-            BFS: Breadth First Search - <a href="https://pt.wikipedia.org/wiki/Busca_em_largura">Link para mais informações</a> 
-        </i>
-	</explanation>
 	<choice type="incorrect">
 		<text>M - N - O - P - Q - R</text>
 		<explanation>

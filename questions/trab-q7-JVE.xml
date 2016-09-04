@@ -1,34 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<question id="1" level="2" subject="recursao">
+<question level="2" chapter="0">
 	<text>
        <p>O problema da <a href="https://pt.wikipedia.org/wiki/Torre_de_Han%C3%B3i">Torre de Hanoi</a> pode ser solucionado de
 		  forma recursiva (solucionar o problema corresponde a determinar a sequência de passsos). Considere o problema genérico, 
           isto é, com um número de discos igual a $n$.
 	   </p>
+	   <i>
+		   O problema da Torre de Hanoi é um problema clássico estudado pela teoria de jogos e Ciência da Computação. Ele pode
+		   ser resolvido resolvido recursivamente. A figura abaixo mostra a solução ótima (menor número de passos) para o problema
+		   com $n = 3$.
+		   <br/>
+		   <img src="images/hanoi.png"/>
+        </i>
 	</text>
-    <explanation>
-		   <i>
-               O problema da Torre de Hanoi é um problema clássico estudado pela teoria de jogos e Ciência da Computação. Ele pode
-               ser resolvido resolvido recursivamente. A figura abaixo mostra a solução ótima (menor número de passos) para o problema
-               com $n = 3$.
-               <br/>
-               <img src="images/hanoi.png"/>
-           </i>
-    </explanation>
-	<choice type="incorrect">
-		<text>A solução recursiva deve ser aplicada pois a solução recursiva, pois ela nunca apresenta desempenho ótimo em termo de complexidade.</text>
-		<explanation>
-			A solução recursiva em problemas de computação pode ter complexidade ótima. Muitas vezes há uma solução recursiva associada a uma solução
-            imperativa de mesma complexidade.
-		</explanation>
-	</choice>
-	<choice type="incorrect">
-		<text>O número de operações cresce linearmente em relação ao número de discos.</text>
-		<explanation>
-            O número de operações cresce exponencialmente em relação ao número de discos, em razão da fórmula recursiva para os número
-            de passos $T(n) = 2T(n-1) + 1$.
-		</explanation>
-	</choice>
 	<choice type="incorrect">
 		<text>
             A técnica para resolver o problema para $n$ discos consiste em resolver o mesmo problema para $n/2$ e unir soluções de 
@@ -47,6 +31,20 @@
 		<explanation>
 			 Isso seria válido se o número de operações tivesse comportamento linear em função do número de discos. O que não ocorre em razão
              da fórmula recursiva para o número de passos $T(n) = 2T(n-1) + 1$.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>A solução recursiva não deve ser aplicada, pois ela nunca apresenta desempenho ótimo em termo de complexidade.</text>
+		<explanation>
+			A solução recursiva em problemas de computação pode ter complexidade ótima. Muitas vezes há uma solução recursiva associada a uma solução
+            imperativa de mesma complexidade.
+		</explanation>
+	</choice>
+	<choice type="incorrect">
+		<text>O número de operações cresce linearmente em relação ao número de discos.</text>
+		<explanation>
+            O número de operações cresce exponencialmente em relação ao número de discos, em razão da fórmula recursiva para os número
+            de passos $T(n) = 2T(n-1) + 1$.
 		</explanation>
 	</choice>
 	<choice type="correct">
