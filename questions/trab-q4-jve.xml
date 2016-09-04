@@ -8,7 +8,7 @@
 		<i>BFS: Breadth First Search - <a href="https://pt.wikipedia.org/wiki/Busca_em_largura">Link para mais informações</a></i>
 	</text>
 	<choice type="incorrect">
-		<text>M - N - O - P - Q - R</text>
+		<text>$M - N - O - P - Q - R$</text>
 		<explanation>
 			Essa sequência não corresponde a uma sequência possível no BFS. Corresponde na verdade
             a uma sequência possível no DFS.

@@ -20,8 +20,9 @@ function renderQuestion(file)
     $xml = $(xmlDoc);
 
     question = $xml.find("question").first();
-    $("#info").html("Assunto: " + question.attr("subject") + " - Nível: " + question.attr("level"));				
+    $("#info").html("Capítulo: " + question.attr("chapter") + " - Nível: " + question.attr("level"));				
     $("#wording").html($xml.find("question > text").first().html());
+	$("#explanation").html("");
     $("#explanation").html($xml.find("question > explanation").first().html());
     
     var $options = $xml.find("choice");

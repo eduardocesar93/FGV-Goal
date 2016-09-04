@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE question SYSTEM "question.dtd">
 
-<question id="1" level="0" subject="graphs">
+<question level="0" chapter="1">
   <text>o texto da questão.</text>
   <explanation>a explicação.</explanation>
   <choice type="correct">

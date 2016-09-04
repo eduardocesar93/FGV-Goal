@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE question SYSTEM "question.dtd">
 
-<question id="1" level="1" subject="calculus">
+<question level="1" chapter="1">
   <text>
     Calcule a seguinte integral $\int \cos \theta \,d\theta$
   </text>
